@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undone Well — Medical Aesthetics &amp; Wellness | Bankers Hill, San Diego</title>
+<meta name="description" content="Undone Well is a boutique medspa in Bankers Hill, San Diego offering injectables, skin treatments, and wellness services for women and men.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   UNDONE WELL — Premium v2 · Warm Editorial Boutique
+   cream #F0EFEA · terracotta #C07A5B · charcoal #67645E
+   gold #B99668 · ink #2E2C28
+   Playfair Display (display) · Space Grotesk (body/UI)
+   ------------------------------------------------------------
+   ADMIN MODE: open page with ?admin=1 to edit text, images,
+   and toggle sections. Content lives in SITE_CONFIG (bottom).
+   ============================================================ */
+:root{
+  --cream:#F0EFEA;--cream-deep:#E7E4DC;--terracotta:#C07A5B;
+  --terracotta-dark:#A9654A;--charcoal:#67645E;--ink:#2E2C28;
+  --gold:#B99668;--white:#FCFBF8;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.72,.24,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{font-family:var(--sans);font-weight:300;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
+::selection{background:var(--terracotta);color:var(--cream)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.hidden{display:none!important}
+
+/* ---------- type ---------- */
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:400;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.06;color:var(--ink)}
+h2{font-size:clamp(34px,4.6vw,62px);letter-spacing:-.005em}
+h3{font-size:clamp(20px,2vw,24px)}
+.italic{font-style:italic;font-weight:400;color:var(--terracotta)}
+.lede{font-size:clamp(15px,1.4vw,18px);color:var(--charcoal);max-width:52ch}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:18px 38px;border-radius:999px;cursor:pointer;transition:all .35s var(--ease);border:1px solid transparent}
+.btn .arrow{transition:transform .35s var(--ease)}
+.btn:hover .arrow{transform:translateX(5px)}
+.btn-solid{background:var(--ink);color:var(--cream)}
+.btn-solid:hover{background:var(--terracotta);color:#fff}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn-cream:hover{background:var(--gold);color:#fff}
+.btn-outline-cream{border-color:rgba(240,239,234,.6);color:var(--cream)}
+.btn-outline-cream:hover{background:var(--cream);color:var(--ink)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--terracotta)}
+
+/* ---------- announcement ---------- */
+.announce{background:var(--ink);color:var(--cream);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;text-align:center;padding:11px 16px;position:relative;z-index:110}
+.announce em{font-style:normal;color:var(--gold)}
+
+/* ---------- header (transparent → solid) ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease);border-bottom:1px solid transparent}
+body.has-announce header{top:39px}
+body.has-announce.scrolled-page header{top:0}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{font-family:var(--serif);font-size:25px;font-weight:500;letter-spacing:.02em;line-height:1;color:var(--cream);transition:color .4s}
+.logo span{display:block;font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:5px}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;color:rgba(240,239,234,.85);position:relative;padding:6px 0;transition:color .4s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease)}
+.nav-links a:hover::after{width:100%}
+.nav-links a.shop-link{color:var(--gold);font-weight:500}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav .btn{padding:13px 26px;background:var(--cream);color:var(--ink)}
+.nav .btn:hover{background:var(--gold);color:#fff}
+header.solid{background:rgba(240,239,234,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:rgba(103,100,94,.14)}
+header.solid .logo{color:var(--ink)}
+header.solid .nav-links a{color:var(--charcoal)}
+header.solid .nav-links a:hover{color:var(--ink)}
+header.solid .nav-links a.shop-link{color:var(--terracotta)}
+header.solid .nav .btn{background:var(--ink);color:var(--cream)}
+header.solid .nav .btn:hover{background:var(--terracotta)}
+header.solid .burger span{background:var(--ink)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:1.5px;background:var(--cream);margin:6px 0;transition:.3s var(--ease)}
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--cream);z-index:99;padding:130px 28px 40px;flex-direction:column;gap:6px;overflow:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--serif);font-size:30px;padding:14px 0;border-bottom:1px solid rgba(103,100,94,.15);color:var(--ink)}
+.mobile-menu a.shop-link{color:var(--terracotta)}
+.mobile-menu .btn{margin-top:28px;justify-content:center;background:var(--ink);color:var(--cream)}
+body.menu-open header{background:rgba(240,239,234,.95)}
+body.menu-open .logo{color:var(--ink)}
+body.menu-open .burger span{background:var(--ink)}
+body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+</style>
+<style>
+/* ---------- FULL-SCREEN HERO SLIDER ---------- */
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;background:var(--ink)}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.4s var(--ease),visibility 1.4s}
+.slide.active{opacity:1;visibility:visible;z-index:1}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide.active img{animation:kenburns 8s var(--ease) forwards}
+@keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1.01)}}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(75deg,rgba(20,18,15,.72) 0%,rgba(20,18,15,.34) 48%,rgba(20,18,15,.1) 100%),linear-gradient(0deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,0) 35%)}
+.hero-content{position:absolute;inset:0;z-index:3;display:flex;align-items:flex-end;padding-bottom:clamp(72px,10vh,128px)}
+.hero-inner{max-width:760px}
+.hero-inner .eyebrow{color:var(--gold);margin-bottom:26px}
+.hero-inner h1{font-size:clamp(44px,7vw,96px);color:var(--cream);letter-spacing:-.01em;margin-bottom:24px;line-height:1.03}
+.hero-inner h1 .italic{color:var(--gold)}
+.hero-inner p{color:rgba(240,239,234,.85);font-size:clamp(15px,1.4vw,18px);max-width:50ch;margin-bottom:38px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-text-swap{transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.hero-text-swap.fading{opacity:0;transform:translateY(14px)}
+/* slider UI */
+.hero-ui{position:absolute;right:clamp(20px,4vw,56px);bottom:clamp(72px,10vh,128px);z-index:4;display:flex;flex-direction:column;align-items:flex-end;gap:22px}
+.hero-count{font-family:var(--serif);font-style:italic;font-size:15px;color:rgba(240,239,234,.85);letter-spacing:.1em}
+.hero-count b{font-size:26px;font-weight:500;font-style:normal;color:var(--cream)}
+.hero-arrows{display:flex;gap:12px}
+.hero-arrows button{width:52px;height:52px;border-radius:50%;border:1px solid rgba(240,239,234,.4);background:rgba(20,18,15,.2);backdrop-filter:blur(6px);color:var(--cream);font-size:17px;cursor:pointer;transition:all .3s var(--ease)}
+.hero-arrows button:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.hero-dots{display:flex;gap:10px}
+.hero-dots button{width:34px;height:3px;border:none;border-radius:2px;background:rgba(240,239,234,.3);cursor:pointer;transition:all .35s var(--ease);padding:0;position:relative;overflow:hidden}
+.hero-dots button.active{background:rgba(240,239,234,.35)}
+.hero-dots button.active::after{content:"";position:absolute;inset:0;background:var(--gold);transform-origin:left;animation:dotfill var(--slide-ms,6500ms) linear forwards}
+@keyframes dotfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero-scroll{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:4;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:rgba(240,239,234,.6);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero-scroll::after{content:"";width:1px;height:34px;background:linear-gradient(rgba(240,239,234,.6),transparent);animation:drip 2.2s ease infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquee ---------- */
+.marquee{border-bottom:1px solid rgba(103,100,94,.18);overflow:hidden;padding:22px 0;background:var(--cream)}
+.marquee-track{display:flex;gap:64px;width:max-content;animation:slide 34s linear infinite}
+.marquee-track span{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--charcoal);display:flex;align-items:center;gap:64px;white-space:nowrap}
+.marquee-track span::after{content:"◆";font-size:7px;color:var(--gold);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- sections & cards ---------- */
+.section{padding:clamp(76px,9vw,140px) 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(40px,5vw,68px)}
+.section-head .eyebrow{margin-bottom:20px}
+.section-head .side{max-width:34ch;font-size:15px;color:var(--charcoal);padding-bottom:8px}
+.media{position:relative;overflow:hidden;background:var(--cream-deep)}
+.media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,44,40,0) 58%,rgba(46,44,40,.22));pointer-events:none}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px)}
+.card{position:relative;display:flex;flex-direction:column}
+.card .media{aspect-ratio:4/4.8;border-radius:18px}
+.card:hover .media img{transform:scale(1.06)}
+.card .tag{position:absolute;top:16px;left:16px;z-index:2;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;background:rgba(240,239,234,.92);color:var(--ink);padding:7px 14px;border-radius:999px;backdrop-filter:blur(6px)}
+.card-body{padding:22px 6px 0}
+.card-body h3{margin-bottom:8px}
+.card-body p{font-size:14.5px;color:var(--charcoal);margin-bottom:14px;max-width:36ch}
+.card-foot{display:flex;justify-content:space-between;align-items:center}
+.card-foot .price{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.card-foot .link{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.card-foot .link .arrow{transition:transform .3s var(--ease)}
+.card:hover .card-foot .link{color:var(--terracotta)}
+.card:hover .card-foot .link .arrow{transform:translateX(4px)}
+
+/* men's inverted */
+.men{background:var(--ink);color:var(--cream)}
+.men h2,.men h3{color:var(--cream)}
+.men .section-head .side{color:rgba(240,239,234,.65)}
+.men .cards{grid-template-columns:repeat(4,1fr)}
+.men .card .media{aspect-ratio:4/5;border-radius:14px}
+.men .card-body p{color:rgba(240,239,234,.62)}
+.men .card-foot .link{color:var(--cream)}
+.men .card:hover .card-foot .link{color:var(--gold)}
+.men .card .tag{background:rgba(46,44,40,.78);color:var(--cream)}
+
+/* philosophy */
+.philosophy{background:var(--cream-deep)}
+.phil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.phil-item{border-top:1px solid rgba(103,100,94,.28);padding-top:26px}
+.phil-item h3{margin-bottom:12px;font-size:21px}
+.phil-item p{font-size:14.5px;color:var(--charcoal);max-width:34ch}
+.phil-num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--terracotta);display:block;margin-bottom:18px}
+
+/* consult */
+.consult{padding:clamp(76px,9vw,140px) 0}
+.consult-panel{position:relative;overflow:hidden;background:var(--terracotta);border-radius:28px;display:grid;grid-template-columns:1.1fr .9fr}
+.consult-copy{padding:clamp(44px,6vw,92px)}
+.consult-copy .eyebrow{color:rgba(240,239,234,.85);margin-bottom:24px}
+.consult-copy .eyebrow::before{background:rgba(240,239,234,.6)}
+.consult-copy h2{color:var(--cream);margin-bottom:22px}
+.consult-copy p{color:rgba(252,251,248,.9);font-size:16px;max-width:46ch;margin-bottom:36px}
+.consult-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+.consult-list{list-style:none;display:grid;gap:12px}
+.consult-list li{display:flex;gap:14px;align-items:baseline;color:rgba(252,251,248,.92);font-size:14px}
+.consult-list li::before{content:"◆";font-size:8px;color:var(--gold);flex-shrink:0}
+.consult-media{min-height:440px}
+.consult-media::after{background:linear-gradient(90deg,rgba(192,122,91,.45),rgba(192,122,91,0) 45%)}
+
+/* footer */
+footer{background:var(--ink);color:rgba(240,239,234,.72);padding:clamp(56px,7vw,88px) 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(32px,4vw,64px);margin-bottom:56px}
+.foot-brand .logo{color:var(--cream);margin-bottom:18px;display:inline-block}
+.foot-brand p{font-size:14px;max-width:32ch}
+.foot-col h4{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:20px}
+.foot-col ul{list-style:none;display:grid;gap:12px}
+.foot-col a{font-size:14px;transition:color .25s}
+.foot-col a:hover{color:var(--cream)}
+.foot-base{border-top:1px solid rgba(240,239,234,.14);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,239,234,.45)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* ---------- ADMIN PANEL ---------- */
+.admin-fab{position:fixed;right:22px;bottom:22px;z-index:300;width:58px;height:58px;border-radius:50%;border:none;background:var(--ink);color:var(--gold);font-size:22px;cursor:pointer;box-shadow:0 16px 40px -12px rgba(46,44,40,.5);transition:transform .3s var(--ease)}
+.admin-fab:hover{transform:rotate(35deg) scale(1.06)}
+.admin{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);z-index:400;background:var(--white);border-left:1px solid rgba(103,100,94,.2);box-shadow:-30px 0 70px -30px rgba(46,44,40,.35);transform:translateX(105%);transition:transform .45s var(--ease);display:flex;flex-direction:column}
+.admin.open{transform:none}
+.admin-head{padding:24px 26px;border-bottom:1px solid rgba(103,100,94,.15);display:flex;justify-content:space-between;align-items:center}
+.admin-head h3{font-size:20px}
+.admin-head small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+.admin-close{background:none;border:none;font-size:24px;cursor:pointer;color:var(--charcoal);line-height:1}
+.admin-body{flex:1;overflow:auto;padding:22px 26px 30px}
+.admin-group{margin-bottom:30px}
+.admin-group>h4{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px;border-bottom:1px solid rgba(103,100,94,.15);padding-bottom:8px}
+.admin-field{margin-bottom:14px}
+.admin-field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--charcoal);margin-bottom:6px}
+.admin-field input[type=text],.admin-field textarea{width:100%;font-family:var(--sans);font-size:13.5px;padding:10px 12px;border:1px solid rgba(103,100,94,.3);border-radius:8px;background:var(--cream);color:var(--ink)}
+.admin-field textarea{resize:vertical;min-height:60px}
+.admin-field input:focus,.admin-field textarea:focus{outline:none;border-color:var(--terracotta)}
+.admin-toggle{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed rgba(103,100,94,.18)}
+.admin-toggle span{font-size:13.5px;color:var(--ink)}
+.switch{position:relative;width:46px;height:25px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.switch i{position:absolute;inset:0;background:rgba(103,100,94,.3);border-radius:999px;transition:.3s;cursor:pointer}
+.switch i::after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:#fff;transition:.3s var(--ease)}
+.switch input:checked+i{background:var(--terracotta)}
+.switch input:checked+i::after{transform:translateX(21px)}
+.admin-foot{padding:18px 26px;border-top:1px solid rgba(103,100,94,.15);display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.admin-foot .btn{padding:13px 10px;justify-content:center;font-size:10.5px;border-radius:10px}
+.admin-note{font-size:11.5px;color:var(--charcoal);background:var(--cream);border-radius:8px;padding:10px 12px;margin-bottom:18px;line-height:1.5}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,80px);z-index:500;background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 26px;border-radius:999px;opacity:0;transition:all .4s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1024px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .men .cards{grid-template-columns:repeat(2,1fr)}
+  .phil-grid{grid-template-columns:1fr;gap:36px}
+  .consult-panel{grid-template-columns:1fr}
+  .consult-media{min-height:300px;order:-1}
+  .consult-media::after{background:linear-gradient(180deg,rgba(192,122,91,0),rgba(192,122,91,.4))}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .nav-links,.nav .btn{display:none}
+  .burger{display:block}
+  .cards{grid-template-columns:1fr}
+  .men .cards{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start;gap:18px}
+  .hero{min-height:560px}
+  .hero-content{padding-bottom:150px}
+  .hero-inner h1{font-size:clamp(40px,11vw,54px)}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .hero-ui{left:20px;right:20px;bottom:56px;flex-direction:row;justify-content:space-between;align-items:center}
+  .hero-arrows button{width:44px;height:44px}
+  .hero-count{display:none}
+  .hero-scroll{display:none}
+  .consult-actions .btn{width:100%;justify-content:center}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .announce{font-size:9px;letter-spacing:.2em}
+}
+</style>
+<style>
+/* ============ v3: dropdown menus ============ */
+.nav-links li{position:relative}
+.nav-links .caret{font-size:9px;margin-left:6px;display:inline-block;transition:transform .3s var(--ease)}
+.nav-links li:hover .caret{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 14px);left:-16px;min-width:250px;background:var(--white);border-radius:16px;padding:10px;box-shadow:0 26px 60px -20px rgba(46,44,40,.35);border:1px solid rgba(103,100,94,.12);opacity:0;visibility:hidden;transform:translateY(12px);transition:all .3s var(--ease)}
+.dropdown::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.nav-links li:hover .dropdown,.nav-links li:focus-within .dropdown{opacity:1;visibility:visible;transform:none}
+.nav-links .dropdown a{display:block;padding:12px 16px;border-radius:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--charcoal);transition:all .25s}
+.nav-links .dropdown a::after{display:none}
+.nav-links .dropdown a:hover{background:var(--cream);color:var(--terracotta);padding-left:22px}
+header.solid .nav-links .dropdown a{color:var(--charcoal)}
+header.solid .nav-links .dropdown a:hover{color:var(--terracotta)}
+
+/* mobile accordion */
+.mm-group{border-bottom:1px solid rgba(103,100,94,.15)}
+.mm-group>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-family:var(--serif);font-size:30px;font-weight:500;color:var(--ink);padding:14px 0;text-align:left}
+.mm-group>button .caret{font-size:13px;color:var(--gold);transition:transform .3s var(--ease)}
+.mm-group.open>button .caret{transform:rotate(180deg)}
+.mm-sub{display:none;padding:0 0 14px}
+.mm-group.open .mm-sub{display:grid;gap:0}
+.mm-sub a{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);padding:11px 0 11px 4px;border:none}
+
+/* ============ v3: page system ============ */
+.page{display:none}
+.page.active{display:block}
+.page-hero{position:relative;padding:clamp(150px,20vh,210px) 0 clamp(56px,7vw,84px);background:var(--ink);overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:-40% -20% auto auto;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(192,122,91,.28),transparent 65%);pointer-events:none}
+.page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(185,150,104,.5),transparent)}
+.page-hero .eyebrow{color:var(--gold);margin-bottom:22px}
+.page-hero h1{font-size:clamp(40px,5.6vw,74px);color:var(--cream);letter-spacing:-.01em;max-width:16ch}
+.page-hero h1 .italic{color:var(--gold)}
+.page-hero p.sub{color:rgba(240,239,234,.75);max-width:56ch;margin-top:20px;font-size:clamp(14px,1.3vw,17px)}
+.crumb{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(240,239,234,.55);margin-top:34px;display:flex;gap:12px;align-items:center}
+.crumb a{color:rgba(240,239,234,.55)}.crumb a:hover{color:var(--gold)}
+.crumb span{color:var(--gold)}
+
+/* ============ v3: before / after slider ============ */
+.ba-section{background:var(--cream-deep)}
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,3vw,44px)}
+.ba-item{display:flex;flex-direction:column;gap:16px}
+.ba{position:relative;aspect-ratio:4/3.5;border-radius:20px;overflow:hidden;background:var(--charcoal);user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after-img{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .ba-bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--cream);transform:translateX(-1px);pointer-events:none;z-index:3}
+.ba .ba-bar::after{content:"⇔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--cream);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 8px 26px rgba(46,44,40,.4)}
+.ba .lab{position:absolute;top:16px;z-index:3;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;padding:7px 14px;border-radius:999px;pointer-events:none}
+.ba .lab-b{left:16px;background:rgba(46,44,40,.72);color:var(--cream)}
+.ba .lab-a{right:16px;background:rgba(240,239,234,.9);color:var(--ink)}
+.ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+.ba-cap{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px}
+.ba-cap h3{font-size:19px}
+.ba-cap span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ba-disclaimer{margin-top:26px;font-size:11.5px;color:var(--charcoal);letter-spacing:.06em}
+
+/* ============ v3: gallery ============ */
+.gal-grid{columns:3;column-gap:18px}
+.gal-grid figure{margin:0 0 18px;border-radius:16px;overflow:hidden;break-inside:avoid;position:relative}
+.gal-grid img{width:100%;transition:transform .6s var(--ease)}
+.gal-grid figure:hover img{transform:scale(1.05)}
+
+/* ============ v3: packages ============ */
+.pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,32px)}
+.pack{background:var(--white);border:1px solid rgba(103,100,94,.18);border-radius:24px;padding:clamp(30px,3vw,44px);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.pack:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(46,44,40,.3)}
+.pack.featured{background:var(--ink);border-color:var(--ink)}
+.pack.featured h3,.pack.featured .pack-price{color:var(--cream)}
+.pack.featured li{color:rgba(240,239,234,.75)}
+.pack .pill{align-self:flex-start;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;background:var(--gold);color:#fff;padding:7px 14px;border-radius:999px;margin-bottom:20px}
+.pack h3{font-size:23px;margin-bottom:6px}
+.pack .tagline{font-size:13.5px;color:var(--charcoal);margin-bottom:22px}
+.pack.featured .tagline{color:rgba(240,239,234,.6)}
+.pack-price{font-family:var(--serif);font-size:clamp(34px,3vw,44px);font-weight:500;color:var(--ink);line-height:1;margin-bottom:26px}
+.pack-price small{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-top:8px}
+.pack ul{list-style:none;display:grid;gap:11px;margin-bottom:30px;flex:1}
+.pack li{display:flex;gap:12px;align-items:baseline;font-size:14px;color:var(--charcoal)}
+.pack li::before{content:"◆";font-size:7px;color:var(--gold);flex-shrink:0}
+.pack .btn{justify-content:center}
+
+/* ============ v3: info pages (allē / team / contact / payment) ============ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);margin-top:clamp(36px,4vw,56px)}
+.step{border-top:1px solid rgba(103,100,94,.28);padding-top:24px}
+.step .phil-num{font-size:26px}
+.info-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,2.4vw,32px)}
+.info-card{background:var(--white);border:1px solid rgba(103,100,94,.16);border-radius:20px;padding:clamp(26px,3vw,38px)}
+.info-card h3{margin-bottom:10px}
+.info-card p{font-size:14.5px;color:var(--charcoal)}
+.info-card .meta{margin-top:16px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,4vw,64px);align-items:start}
+.contact-list{list-style:none;display:grid;gap:22px;margin-top:34px}
+.contact-list li strong{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:5px}
+.contact-list li a{font-family:var(--serif);font-size:21px;color:var(--ink)}
+.contact-list li a:hover{color:var(--terracotta)}
+.hours-card{background:var(--ink);border-radius:24px;padding:clamp(30px,3.4vw,46px);color:var(--cream)}
+.hours-card h3{color:var(--cream);margin-bottom:22px}
+.hours-card table{width:100%;border-collapse:collapse;font-size:14px}
+.hours-card td{padding:11px 0;border-bottom:1px dashed rgba(240,239,234,.18);color:rgba(240,239,234,.8)}
+.hours-card td:last-child{text-align:right;color:var(--gold)}
+.cta-strip{margin-top:clamp(48px,6vw,72px);background:var(--terracotta);border-radius:24px;padding:clamp(34px,4vw,54px);display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+.cta-strip h3{color:var(--cream);font-size:clamp(22px,2.4vw,30px);max-width:26ch}
+
+@media (max-width:1024px){
+  .ba-grid{grid-template-columns:1fr}
+  .gal-grid{columns:2}
+  .pack-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .info-cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .gal-grid{columns:1}
+  .cta-strip .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body class="has-announce">
+
+<div class="announce" data-feature="announcement"><span data-cfg="announcement"></span></div>
+
+<header id="siteHeader">
+  <nav class="nav wrap" aria-label="Main">
+    <a href="#/" class="logo">Undone Well<span>Medical Aesthetics</span></a>
+    <ul class="nav-links">
+      <li>
+        <a href="#/injectables">Services<span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="#/injectables">Cosmetic Injectables</a>
+          <a href="#/facials">Medical Facials</a>
+          <a href="#/skin">Skin Treatments</a>
+        </div>
+      </li>
+      <li><a href="#/gallery" data-feature="gallery">Gallery</a></li>
+      <li>
+        <a href="#/packages">Offers<span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="#/packages">Packages</a>
+          <a href="#/alle">Allē Botox Points</a>
+        </div>
+      </li>
+      <li>
+        <a href="#/contact">About<span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="#/team">Join Our Team</a>
+          <a href="#/contact">Contact</a>
+          <a href="#/payment">Payment Options</a>
+        </div>
+      </li>
+      <li><a href="#" class="shop-link" data-shop target="_blank" rel="noopener">Shop ↗</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#consult" class="btn" data-booking>Book Now</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">
+    <button onclick="this.parentElement.classList.toggle('open')">Services <span class="caret">▾</span></button>
+    <div class="mm-sub">
+      <a href="#/injectables" onclick="closeMenu()">Cosmetic Injectables</a>
+      <a href="#/facials" onclick="closeMenu()">Medical Facials</a>
+      <a href="#/skin" onclick="closeMenu()">Skin Treatments</a>
+    </div>
+  </div>
+  <a href="#/gallery" data-feature="gallery" onclick="closeMenu()">Gallery</a>
+  <div class="mm-group">
+    <button onclick="this.parentElement.classList.toggle('open')">Offers <span class="caret">▾</span></button>
+    <div class="mm-sub">
+      <a href="#/packages" onclick="closeMenu()">Packages</a>
+      <a href="#/alle" onclick="closeMenu()">Allē Botox Points</a>
+    </div>
+  </div>
+  <div class="mm-group">
+    <button onclick="this.parentElement.classList.toggle('open')">About <span class="caret">▾</span></button>
+    <div class="mm-sub">
+      <a href="#/team" onclick="closeMenu()">Join Our Team</a>
+      <a href="#/contact" onclick="closeMenu()">Contact</a>
+      <a href="#/payment" onclick="closeMenu()">Payment Options</a>
+    </div>
+  </div>
+  <a href="#" class="shop-link" data-shop target="_blank" rel="noopener">Shop ↗</a>
+  <a href="#consult" class="btn" data-booking onclick="closeMenu()">Book Now</a>
+</div>
+
+<div class="page active" data-page="home">
+<!-- ============ FULL-SCREEN HERO SLIDER ============ -->
+<section class="hero" id="hero">
+  <div class="slides" id="slides"></div>
+  <div class="hero-content">
+    <div class="wrap"><div class="hero-inner hero-text-swap" id="heroText">
+      <p class="eyebrow" id="hEyebrow"></p>
+      <h1 id="hTitle"></h1>
+      <p id="hSub"></p>
+      <div class="hero-actions">
+        <a href="#consult" class="btn btn-cream" data-booking>Book a Consultation <span class="arrow">→</span></a>
+        <a href="#women" class="btn btn-outline-cream">Explore Treatments</a>
+      </div>
+    </div></div>
+  </div>
+  <div class="hero-ui">
+    <div class="hero-count"><b id="slideNow">01</b> / <span id="slideTotal">03</span></div>
+    <div class="hero-arrows">
+      <button onclick="goSlide(-1)" aria-label="Previous slide">←</button>
+      <button onclick="goSlide(1)" aria-label="Next slide">→</button>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<div class="marquee" data-feature="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Neurotoxins</span><span>Dermal Fillers</span><span>Microneedling</span><span>Chemical Peels</span><span>Signature Facials</span><span>Laser Hair Removal</span>
+    <span>Neurotoxins</span><span>Dermal Fillers</span><span>Microneedling</span><span>Chemical Peels</span><span>Signature Facials</span><span>Laser Hair Removal</span>
+  </div>
+</div>
+
+<!-- ============ FOR WOMEN ============ -->
+<section class="section" id="women" data-feature="women">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Services · For Women</p>
+        <h2>Treatments for <span class="italic">her</span></h2>
+      </div>
+      <p class="side" data-cfg="womenSide"></p>
+    </div>
+    <div class="cards" id="womenCards"></div>
+  </div>
+</section>
+
+<!-- ============ FOR MEN ============ -->
+<section class="section men" id="men" data-feature="men">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Services · For Men</p>
+        <h2>Built for <span class="italic">him</span></h2>
+      </div>
+      <p class="side" data-cfg="menSide"></p>
+    </div>
+    <div class="cards" id="menCards"></div>
+  </div>
+</section>
+
+
+<!-- ============ BEFORE & AFTER · BOTOX ============ -->
+<section class="section ba-section" id="results" data-feature="beforeAfter">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Real Results · Botox</p>
+        <h2>Before &amp; <span class="italic">after</span></h2>
+      </div>
+      <p class="side">Drag the handle to compare. Unretouched results from real Undone Well clients — subtle by design.</p>
+    </div>
+    <div class="ba-grid" id="baHome"></div>
+    <p class="ba-disclaimer">Individual results vary. Photos shared with client consent. Sample imagery shown until client gallery is loaded.</p>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="section philosophy" id="philosophy" data-feature="philosophy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Why Undone Well</p>
+        <h2>The <span class="italic">quiet luxury</span> of good work</h2>
+      </div>
+    </div>
+    <div class="phil-grid">
+      <div class="phil-item reveal"><span class="phil-num">i.</span><h3>Medically led, always</h3><p>Every plan is designed and overseen by a physician. Aesthetics is medicine here — treated with that respect.</p></div>
+      <div class="phil-item reveal"><span class="phil-num">ii.</span><h3>Undetectable by design</h3><p>We dose conservatively and build gradually. The goal is you on your best day, not a different face.</p></div>
+      <div class="phil-item reveal"><span class="phil-num">iii.</span><h3>No pressure, ever</h3><p>Consultations are complimentary and honest. If a treatment isn't right for you, we'll say so.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULT ============ -->
+<section class="consult" id="consult" data-feature="consult">
+  <div class="wrap">
+    <div class="consult-panel reveal">
+      <div class="consult-copy">
+        <p class="eyebrow">Consult Us</p>
+        <h2 data-cfg="consultTitle"></h2>
+        <p data-cfg="consultText"></p>
+        <div class="consult-actions">
+          <a href="#" class="btn btn-cream" data-booking-real target="_blank" rel="noopener">Book Your Consultation <span class="arrow">→</span></a>
+          <a href="#" class="btn btn-outline-cream" data-phone>Call the Studio</a>
+        </div>
+        <ul class="consult-list">
+          <li>Complimentary — always free, always honest</li>
+          <li>Personalized treatment roadmap the same day</li>
+          <li>Allē Rewards points on eligible treatments</li>
+        </ul>
+      </div>
+      <div class="media consult-media"><img data-cfg-img="images.consult" alt="Consultation at Undone Well" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page:home -->
+
+<!-- ============ PAGE · GALLERY ============ -->
+<div class="page" data-page="gallery">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Undone Well</p>
+    <h1>The <span class="italic">gallery</span></h1>
+    <p class="sub">Our studio, our work, and real client results — drag the sliders to compare before and after.</p>
+    <p class="crumb"><a href="#/">Home</a> · <span>Gallery</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Results</p><h2>Botox, <span class="italic">before &amp; after</span></h2></div></div>
+    <div class="ba-grid" id="baGallery"></div>
+    <p class="ba-disclaimer">Individual results vary. Photos shared with client consent.</p>
+  </div></section>
+  <section class="section" style="padding-top:0"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Studio &amp; Work</p><h2>Inside <span class="italic">Undone Well</span></h2></div></div>
+    <div class="gal-grid" id="galGrid"></div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · COSMETIC INJECTABLES ============ -->
+<div class="page" data-page="injectables">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h1>Cosmetic <span class="italic">injectables</span></h1>
+    <p class="sub">Neurotoxins and fillers with a light, structural hand — dosed for a natural finish and overseen by our medical team.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/injectables">Services</a> · <span>Cosmetic Injectables</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="cards" id="injCards"></div>
+    <div class="cta-strip reveal">
+      <h3>Not sure where to start? That's what consultations are for.</h3>
+      <a href="#" class="btn btn-cream" data-booking-real target="_blank" rel="noopener">Book a Consultation <span class="arrow">→</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · MEDICAL FACIALS ============ -->
+<div class="page" data-page="facials">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h1>Medical <span class="italic">facials</span></h1>
+    <p class="sub">Results-driven facials that go deeper than a spa — clinical actives, gentle hands, and an hour that feels like a holiday.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/injectables">Services</a> · <span>Medical Facials</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="cards" id="facCards"></div>
+    <div class="cta-strip reveal">
+      <h3>Pair any facial with dermaplaning or LED for a deeper glow.</h3>
+      <a href="#" class="btn btn-cream" data-booking-real target="_blank" rel="noopener">Book a Facial <span class="arrow">→</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · SKIN TREATMENTS ============ -->
+<div class="page" data-page="skin">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h1>Skin <span class="italic">treatments</span></h1>
+    <p class="sub">Texture, tone, scarring, and hair removal — corrective treatments that rebuild skin from within.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/injectables">Services</a> · <span>Skin Treatments</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="cards" id="skinCards"></div>
+    <div class="cta-strip reveal">
+      <h3>Most skin plans combine 2–3 treatments over a season. We'll map yours.</h3>
+      <a href="#" class="btn btn-cream" data-booking-real target="_blank" rel="noopener">Start Your Plan <span class="arrow">→</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · PACKAGES ============ -->
+<div class="page" data-page="packages">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Offers</p>
+    <h1>Packages &amp; <span class="italic">memberships</span></h1>
+    <p class="sub">Bundled treatments and member pricing for the way skin actually works — consistently, over time.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/packages">Offers</a> · <span>Packages</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="pack-grid" id="packGrid"></div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · ALLĒ BOTOX POINTS ============ -->
+<div class="page" data-page="alle">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Offers</p>
+    <h1>Allē <span class="italic">Botox points</span></h1>
+    <p class="sub">Undone Well is an Allē partner — earn points on Botox® and other Allergan treatments, and redeem them as real dollars off your next visit.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/packages">Offers</a> · <span>Allē Botox Points</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">How it works</p><h2>Earn while you <span class="italic">glow</span></h2></div></div>
+    <div class="steps">
+      <div class="step reveal"><span class="phil-num">01</span><h3>Join Allē free</h3><p>Sign up in under two minutes. Membership is free and points never require a purchase to start.</p></div>
+      <div class="step reveal"><span class="phil-num">02</span><h3>Earn on every visit</h3><p>Get points every time you're treated with Botox®, Juvéderm®, and other Allergan Aesthetics brands here.</p></div>
+      <div class="step reveal"><span class="phil-num">03</span><h3>Redeem for savings</h3><p>Points convert to dollars off future treatments — plus you'll get member-only offers throughout the year.</p></div>
+    </div>
+    <div class="cta-strip reveal">
+      <h3>Already an Allē member? Tell us at check-in and we'll link your visit.</h3>
+      <a href="https://alle.com" class="btn btn-cream" target="_blank" rel="noopener">Join Allē Free <span class="arrow">→</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · JOIN OUR TEAM ============ -->
+<div class="page" data-page="team">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>Join our <span class="italic">team</span></h1>
+    <p class="sub">We hire for warmth first, skill second — both non-negotiable. If you believe aesthetics should feel like medicine and hospitality at once, we'd love to meet you.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/contact">About</a> · <span>Join Our Team</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="section-head reveal"><div><p class="eyebrow">Open roles</p><h2>Currently <span class="italic">hiring</span></h2></div></div>
+    <div class="info-cards">
+      <div class="info-card reveal"><h3>Nurse Injector (RN / NP)</h3><p>Experienced with neurotoxins and fillers, conservative dosing philosophy, and genuinely great with people.</p><p class="meta">Part-time or Full-time · Bankers Hill</p></div>
+      <div class="info-card reveal"><h3>Licensed Aesthetician</h3><p>Facials, dermaplaning, peels, and laser. You care about outcomes and the experience in equal measure.</p><p class="meta">Full-time · Bankers Hill</p></div>
+      <div class="info-card reveal"><h3>Front of House / Concierge</h3><p>The first face of Undone Well. Organized, warm, and calm under a full book.</p><p class="meta">Full-time · Bankers Hill</p></div>
+      <div class="info-card reveal"><h3>Don't see your role?</h3><p>Exceptional people make their own openings. Tell us what you'd bring.</p><p class="meta">Always open</p></div>
+    </div>
+    <div class="cta-strip reveal">
+      <h3>Send your resume and a note — tell us about your favorite client story.</h3>
+      <a href="mailto:careers@undonewell.com" class="btn btn-cream">careers@undonewell.com</a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · CONTACT ============ -->
+<div class="page" data-page="contact">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>Contact <span class="italic">us</span></h1>
+    <p class="sub">Questions, bookings, or just want to say hi — here's every way to reach the studio.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/contact">About</a> · <span>Contact</span></p>
+  </div></section>
+  <section class="section"><div class="wrap contact-grid">
+    <div class="reveal">
+      <p class="eyebrow">The Studio</p>
+      <h2>Bankers Hill,<br><span class="italic">San Diego</span></h2>
+      <ul class="contact-list">
+        <li><strong>Visit</strong><a href="#" data-cfg="contact.address"></a></li>
+        <li><strong>Call or text</strong><a href="#" data-phone data-cfg="contact.phoneDisplay"></a></li>
+        <li><strong>Email</strong><a href="mailto:hello@undonewell.com">hello@undonewell.com</a></li>
+        <li><strong>Book online</strong><a href="#" data-booking-real target="_blank" rel="noopener">Zenoti booking ↗</a></li>
+      </ul>
+    </div>
+    <div class="hours-card reveal">
+      <h3>Studio hours</h3>
+      <table>
+        <tr><td>Monday – Thursday</td><td>9am – 7pm</td></tr>
+        <tr><td>Friday</td><td>9am – 6pm</td></tr>
+        <tr><td>Saturday</td><td>10am – 4pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ PAGE · PAYMENT OPTIONS ============ -->
+<div class="page" data-page="payment">
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>Payment <span class="italic">options</span></h1>
+    <p class="sub">Good skin shouldn't require financial gymnastics. Here's every way to pay — including 0% options.</p>
+    <p class="crumb"><a href="#/">Home</a> · <a href="#/contact">About</a> · <span>Payment Options</span></p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="info-cards">
+      <div class="info-card reveal"><h3>Cards &amp; contactless</h3><p>All major credit and debit cards, Apple Pay, and Google Pay accepted in-studio and online.</p><p class="meta">Visa · MC · Amex · Discover</p></div>
+      <div class="info-card reveal"><h3>Cherry financing</h3><p>Split any treatment into flexible monthly payments — instant approval decision with no hard credit check to apply.</p><p class="meta">Plans from 0% APR</p></div>
+      <div class="info-card reveal"><h3>CareCredit</h3><p>Use your existing CareCredit health and wellness card on eligible treatments at Undone Well.</p><p class="meta">Accepted in-studio</p></div>
+      <div class="info-card reveal"><h3>Allē points &amp; gift cards</h3><p>Redeem Allē points as dollars off Allergan treatments, or treat someone with an Undone Well gift card.</p><p class="meta">Stackable with packages</p></div>
+    </div>
+    <div class="cta-strip reveal">
+      <h3>Want to pre-check financing before your visit? Ask us at booking.</h3>
+      <a href="#" class="btn btn-cream" data-booking-real target="_blank" rel="noopener">Book a Consultation <span class="arrow">→</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#/" class="logo">Undone Well<span>Medical Aesthetics</span></a>
+        <p>A boutique medspa in Bankers Hill, San Diego — where good medicine meets quiet luxury.</p>
+      </div>
+      <div class="foot-col"><h4>Explore</h4><ul>
+        <li><a href="#/injectables">Cosmetic Injectables</a></li>
+        <li><a href="#/facials">Medical Facials</a></li>
+        <li><a href="#/skin">Skin Treatments</a></li>
+        <li><a href="#/gallery" data-feature="gallery">Gallery</a></li>
+        <li><a href="#/packages">Packages</a></li>
+        <li><a href="#" data-shop target="_blank" rel="noopener">Shop Skincare ↗</a></li>
+      </ul></div>
+      <div class="foot-col"><h4>Visit</h4><ul>
+        <li><a href="#/contact">Bankers Hill, San Diego</a></li>
+        <li><a href="#" data-phone>Call the Studio</a></li>
+        <li><a href="mailto:hello@undonewell.com">hello@undonewell.com</a></li>
+      </ul></div>
+      <div class="foot-col"><h4>Follow</h4><ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Allē Rewards</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Undone Well</span><span>Privacy · Terms · Accessibility</span></div>
+  </div>
+</footer>
+
+<!-- ============ ADMIN ============ -->
+<button class="admin-fab hidden" id="adminFab" onclick="toggleAdmin()" title="Edit site">✎</button>
+<aside class="admin" id="adminPanel" aria-label="Site editor">
+  <div class="admin-head">
+    <div><h3>Site Editor</h3><small>Undone Well · Admin</small></div>
+    <button class="admin-close" onclick="toggleAdmin()" aria-label="Close editor">×</button>
+  </div>
+  <div class="admin-body" id="adminBody"></div>
+  <div class="admin-foot">
+    <button class="btn btn-solid" onclick="adminSave()">Save</button>
+    <button class="btn btn-gold" onclick="adminExport()">Export</button>
+    <button class="btn btn-outline" onclick="adminReset()">Reset</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   SITE_CONFIG — everything editable lives here.
+   In admin mode (?admin=1) this is editable in the browser;
+   saved changes publish to the backend (/api/config) and go
+   live for every visitor instantly.
+   ============================================================ */
+const DEFAULT_CONFIG = {
+  links: {
+    shopify: "https://undonewell.myshopify.com",      // ← your Shopify store
+    booking: "https://undonewell.zenoti.com",          // ← Zenoti booking link
+    phone: "+16195550100"
+  },
+  announcement: "Complimentary consultations · Allē Rewards accepted · Bankers Hill, San Diego",
+  features: {
+    announcement: true,
+    marquee: true,
+    women: true,
+    men: true,
+    philosophy: true,
+    consult: true,
+    heroAutoplay: true
+  },
+  heroInterval: 6500,
+  hero: {
+    slides: [
+      {
+        img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop",
+        eyebrow: "Boutique Medspa · Bankers Hill",
+        title: "Come as you are. Leave *undone, well.*",
+        sub: "Physician-guided aesthetics and wellness in an unhurried, editorial-calm studio. Subtle results, honest guidance — never a template."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000&auto=format&fit=crop",
+        eyebrow: "Skin · Body · Wellness",
+        title: "Quiet luxury, *visible results.*",
+        sub: "From neurotoxins to signature facials, every treatment is dosed for a natural finish. You on your best day — nothing more, nothing less."
+      },
+      {
+        img: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2000&auto=format&fit=crop",
+        eyebrow: "For Women · For Men",
+        title: "Aesthetics is *medicine* here.",
+        sub: "MD-led plans, complimentary consultations, and Allē rewards on every eligible visit. Start with a conversation."
+      }
+    ]
+  },
+  womenSide: "Every plan begins with a conversation. These are our most-loved treatments — refined, layered, and always dosed for a natural finish.",
+  menSide: "Discreet, efficient, and dosed for masculine features. In and out on your lunch break — no one has to know.",
+  consultTitle: "Start with a conversation",
+  consultText: "Thirty unhurried minutes with our medical team. We'll listen, assess, and map a plan that fits your face, your goals, and your budget — with zero obligation.",
+  images: {
+    consult: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1400&auto=format&fit=crop"
+  },
+  women: [
+    { tag:"Most Loved", img:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200&auto=format&fit=crop",
+      title:"Neurotoxins", text:"Botox® & Dysport® to soften fine lines and prevent new ones — movement kept, tension released.", price:"From $12 / unit" },
+    { tag:"", img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop",
+      title:"Dermal Fillers", text:"Restore volume and refine contour in lips, cheeks, and jawline with a light, structural hand.", price:"From $650" },
+    { tag:"", img:"https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop",
+      title:"Microneedling + PRP", text:"Collagen induction for texture, scarring, and glow — amplified with platelet-rich plasma.", price:"From $350" },
+    { tag:"", img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop",
+      title:"Chemical Peels", text:"Medical-grade resurfacing tailored to your skin — from lunchtime glow to deeper renewal.", price:"From $180" },
+    { tag:"Signature", img:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop",
+      title:"Signature Facials", text:"The Undone Facial: deep cleanse, dermaplane, and hydration ritual — our calmest hour.", price:"From $145" },
+    { tag:"", img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200&auto=format&fit=crop",
+      title:"Laser Hair Removal", text:"Smooth, lasting results for all skin tones with comfort-first laser technology.", price:"From $95 / area" }
+  ],
+  men: [
+    { tag:"Popular", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop",
+      title:"Brotox", text:"Neurotoxin dosing calibrated for men — smooths the brow without freezing expression.", price:"From $12 / unit" },
+    { tag:"", img:"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1200&auto=format&fit=crop",
+      title:"Hair Restoration", text:"PRP scalp therapy to slow thinning and restore density where it matters.", price:"From $450" },
+    { tag:"", img:"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+      title:"Body Contouring", text:"Non-invasive sculpting for stubborn areas that training alone won't move.", price:"Consult first" },
+    { tag:"", img:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop",
+      title:"Skin & Laser", text:"Razor-burn relief, back and neck laser, and no-nonsense facials for working skin.", price:"From $95" }
+  ]
+};
+
+
+/* ---------- v3 config: pages, gallery, before/after, packages ---------- */
+Object.assign(DEFAULT_CONFIG.features, { beforeAfter:true, gallery:true });
+Object.assign(DEFAULT_CONFIG, {
+  contact: {
+    address: "1234 Fifth Ave, Bankers Hill, San Diego",
+    phoneDisplay: "(619) 555-0100"
+  },
+  beforeAfter: [
+    { title:"Forehead lines", note:"Botox · 14 days",
+      before:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop",
+      after:"https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1200&auto=format&fit=crop" },
+    { title:"Crow's feet", note:"Botox · 30 days",
+      before:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      after:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop" }
+  ],
+  gallery: [
+    "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1000&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1000&auto=format&fit=crop"
+  ],
+  injectables: [
+    { tag:"Most Loved", img:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200&auto=format&fit=crop",
+      title:"Botox® & Dysport®", text:"Precision neurotoxin for forehead lines, elevens, and crow's feet — movement kept, tension released.", price:"From $12 / unit" },
+    { tag:"", img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop",
+      title:"Dermal Fillers", text:"Cheeks, jawline, and under-eye restoration with a light, structural hand.", price:"From $650" },
+    { tag:"", img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      title:"Lip Enhancement", text:"Hydrated, balanced lips that still look like yours — never overfilled.", price:"From $550" },
+    { tag:"New", img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop",
+      title:"Bio-stimulators", text:"Sculptra® and collagen bankers for gradual, long-horizon firmness.", price:"Consult first" }
+  ],
+  facials: [
+    { tag:"Signature", img:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=1200&auto=format&fit=crop",
+      title:"The Undone Facial", text:"Deep cleanse, extraction, massage, and hydration ritual — our calmest hour.", price:"From $145" },
+    { tag:"", img:"https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop",
+      title:"Hydra-Glow Facial", text:"Vortex cleansing and serum infusion for instant, event-ready luminosity.", price:"From $185" },
+    { tag:"", img:"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200&auto=format&fit=crop",
+      title:"Dermaplaning", text:"Peach-fuzz and dead-skin removal for glass-smooth makeup application.", price:"From $95" },
+    { tag:"Add-on", img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop",
+      title:"LED Light Therapy", text:"Red and blue light to calm inflammation and boost collagen post-treatment.", price:"From $65" }
+  ],
+  skinTreatments: [
+    { tag:"", img:"https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop",
+      title:"Microneedling + PRP", text:"Collagen induction for texture and scarring — amplified with platelet-rich plasma.", price:"From $350" },
+    { tag:"", img:"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop",
+      title:"Chemical Peels", text:"Medical-grade resurfacing tailored to your skin — glow to deep renewal.", price:"From $180" },
+    { tag:"", img:"https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1200&auto=format&fit=crop",
+      title:"Laser Hair Removal", text:"Smooth, lasting results for all skin tones with comfort-first technology.", price:"From $95 / area" },
+    { tag:"", img:"https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop",
+      title:"IPL Photofacial", text:"Sun damage, redness, and pigment corrected with intense pulsed light.", price:"From $250" }
+  ],
+  packages: [
+    { name:"Tox & Glow Duo", tagline:"Same-day reset", price:"$399", per:"one visit", featured:false,
+      includes:["Neurotoxin treatment (up to 30 units)","The Undone Signature Facial","LED light therapy add-on","Take-home recovery kit"] },
+    { name:"Glow Membership", tagline:"Skin, on subscription", price:"$149", per:"per month", featured:true,
+      includes:["One signature facial every month","10% off all injectables","15% off retail skincare","Priority booking & member events","Roll over one unused facial"] },
+    { name:"Bride-to-Be", tagline:"A 3-month runway", price:"$899", per:"3-month plan", featured:false,
+      includes:["Two neurotoxin sessions","Facial series (3 sessions)","One brightening peel","Wedding-week glow appointment"] }
+  ]
+});
+
+/* ---------- config load / merge ---------- */
+function deepMerge(base, over){
+  const out = Array.isArray(base) ? [...base] : {...base};
+  if(!over || typeof over !== "object") return out;
+  for(const k of Object.keys(over)){
+    if(over[k] && typeof over[k]==="object" && base[k] && typeof base[k]==="object" && !Array.isArray(over[k])){
+      out[k] = deepMerge(base[k], over[k]);
+    } else { out[k] = over[k]; }
+  }
+  return out;
+}
+let CONFIG = structuredClone(DEFAULT_CONFIG);
+
+/* ---------- helpers ---------- */
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const getPath = (obj,p) => p.split(".").reduce((o,k)=>o?.[k], obj);
+function starsToItalic(t){ return t.replace(/\*(.+?)\*/g,'<span class="italic">$1</span>'); }
+
+/* ---------- render: text bindings, links, features ---------- */
+function applyConfig(){
+  $$("[data-cfg]").forEach(el => { const v=getPath(CONFIG, el.dataset.cfg); if(v!=null) el.textContent=v; });
+  $$("[data-cfg-img]").forEach(el => { const v=getPath(CONFIG, el.dataset.cfgImg); if(v) el.src=v; });
+  $$("[data-shop]").forEach(a => a.href = CONFIG.links.shopify);
+  $$("[data-booking-real]").forEach(a => a.href = CONFIG.links.booking);
+  $$("[data-phone]").forEach(a => a.href = "tel:"+CONFIG.links.phone);
+  $$("[data-feature]").forEach(el => {
+    el.classList.toggle("hidden", CONFIG.features[el.dataset.feature] === false);
+  });
+  document.body.classList.toggle("has-announce", CONFIG.features.announcement !== false);
+  renderCards("womenCards", CONFIG.women, "Book");
+  renderCards("menCards", CONFIG.men, "Book");
+  renderExtras();
+  buildSlider();
+  observeReveals();
+}
+
+/* ---------- treatment cards ---------- */
+function renderCards(id, items, cta){
+  const host = document.getElementById(id); if(!host) return;
+  host.innerHTML = items.map(it => `
+    <article class="card reveal">
+      <div class="media">
+        ${it.tag ? `<span class="tag">${it.tag}</span>` : ""}
+        <img src="${it.img}" alt="${it.title}" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="card-body">
+        <h3>${it.title}</h3>
+        <p>${it.text}</p>
+        <div class="card-foot">
+          <span class="price">${it.price}</span>
+          <a href="${CONFIG.links.booking}" target="_blank" rel="noopener" class="link">${cta} <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+/* ---------- full-screen hero slider ---------- */
+let slideIdx = 0, slideTimer = null;
+function buildSlider(){
+  const slides = CONFIG.hero.slides;
+  document.documentElement.style.setProperty("--slide-ms", CONFIG.heroInterval+"ms");
+  $("#slides").innerHTML = slides.map((s,i)=>`
+    <div class="slide${i===0?" active":""}" data-i="${i}">
+      <img src="${s.img}" alt="" ${i===0?'fetchpriority="high"':'loading="lazy"'} onerror="this.style.display='none'">
+    </div>`).join("");
+  $("#heroDots").innerHTML = slides.map((_,i)=>`
+    <button class="${i===0?"active":""}" aria-label="Go to slide ${i+1}" onclick="setSlide(${i},true)"></button>`).join("");
+  $("#slideTotal").textContent = String(slides.length).padStart(2,"0");
+  slideIdx = 0; paintSlideText(0); restartAuto();
+}
+function paintSlideText(i){
+  const s = CONFIG.hero.slides[i];
+  $("#hEyebrow").textContent = s.eyebrow;
+  $("#hTitle").innerHTML = starsToItalic(s.title);
+  $("#hSub").textContent = s.sub;
+  $("#slideNow").textContent = String(i+1).padStart(2,"0");
+}
+function setSlide(i, user){
+  const n = CONFIG.hero.slides.length;
+  slideIdx = (i+n)%n;
+  $$(".slide").forEach(el => el.classList.toggle("active", +el.dataset.i===slideIdx));
+  $$("#heroDots button").forEach((d,di)=> d.classList.toggle("active", di===slideIdx));
+  const t = $("#heroText");
+  t.classList.add("fading");
+  setTimeout(()=>{ paintSlideText(slideIdx); t.classList.remove("fading"); }, 380);
+  if(user) restartAuto();
+}
+function goSlide(dir){ setSlide(slideIdx+dir, true); }
+function restartAuto(){
+  clearInterval(slideTimer);
+  if(CONFIG.features.heroAutoplay !== false && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+    slideTimer = setInterval(()=>setSlide(slideIdx+1,false), CONFIG.heroInterval);
+  }
+}
+
+/* ---------- header + menu + reveals ---------- */
+const header = $("#siteHeader");
+function onScroll(){
+  const y = scrollY;
+  header.classList.toggle("solid", y > innerHeight*0.72 || document.body.classList.contains("menu-open") || document.body.classList.contains("subpage"));
+  document.body.classList.toggle("scrolled-page", y > 42);
+}
+addEventListener("scroll", onScroll, {passive:true});
+function toggleMenu(btn){
+  const open = $("#mobileMenu").classList.toggle("open");
+  document.body.classList.toggle("menu-open", open);
+  btn.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
+  onScroll();
+}
+function closeMenu(){
+  $("#mobileMenu").classList.remove("open");
+  document.body.classList.remove("menu-open");
+  $(".burger").setAttribute("aria-expanded","false");
+  document.body.style.overflow = "";
+  onScroll();
+}
+let io;
+function observeReveals(){
+  io?.disconnect();
+  io = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} });
+  },{threshold:.12});
+  $$(".reveal").forEach(el=>io.observe(el));
+}
+
+/* ============================================================
+   ADMIN PANEL  (open the page with ?admin=1)
+   ============================================================ */
+const isAdmin = new URLSearchParams(location.search).get("admin")==="1";
+let WORK = structuredClone(CONFIG);
+function toggleAdmin(){ $("#adminPanel").classList.toggle("open"); }
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),2200); }
+
+function fieldRow(label, path, value, textarea){
+  const tag = textarea ? "textarea" : `input type="text"`;
+  const val = String(value ?? "").replace(/"/g,"&quot;");
+  return `<div class="admin-field"><label>${label}</label>
+    ${textarea
+      ? `<textarea data-path="${path}">${value ?? ""}</textarea>`
+      : `<input type="text" data-path="${path}" value="${val}">`}
+  </div>`;
+}
+function toggleRow(label, key){
+  const on = WORK.features[key] !== false;
+  return `<div class="admin-toggle"><span>${label}</span>
+    <label class="switch"><input type="checkbox" data-feature="${key}" ${on?"checked":""}><i></i></label></div>`;
+}
+function buildAdmin(){
+  const b = $("#adminBody");
+  let html = `<div class="admin-note"><b>Save</b> publishes instantly for every visitor. <b>Export</b> downloads a backup of the config JSON.</div>`;
+  html += `<div class="admin-group"><h4>Upload image</h4>
+    <div class="admin-field"><label>Upload a photo \u2192 get a URL to paste into any image field below</label>
+    <input type="file" id="upl" accept="image/*"></div>
+    <div class="admin-field hidden" id="uplOut"><label>Uploaded URL (copied to clipboard)</label>
+    <input type="text" id="uplUrl" readonly onclick="this.select()"></div></div>`;
+  html += `<div class="admin-group"><h4>Sections on / off</h4>
+    ${toggleRow("Announcement bar","announcement")}
+    ${toggleRow("Services marquee","marquee")}
+    ${toggleRow("For Women","women")}
+    ${toggleRow("For Men","men")}
+    ${toggleRow("Philosophy","philosophy")}
+    ${toggleRow("Consult panel","consult")}
+    ${toggleRow("Before & After","beforeAfter")}
+    ${toggleRow("Gallery (menu + page)","gallery")}
+    ${toggleRow("Hero autoplay","heroAutoplay")}
+  </div>`;
+  html += `<div class="admin-group"><h4>Links</h4>
+    ${fieldRow("Shopify store URL","links.shopify",WORK.links.shopify)}
+    ${fieldRow("Booking URL (Zenoti)","links.booking",WORK.links.booking)}
+    ${fieldRow("Phone","links.phone",WORK.links.phone)}
+  </div>`;
+  html += `<div class="admin-group"><h4>Announcement</h4>${fieldRow("Bar text","announcement",WORK.announcement,true)}</div>`;
+  html += `<div class="admin-group"><h4>Hero slides <small>(*word* = gold italic)</small></h4>` +
+    WORK.hero.slides.map((s,i)=>`
+      ${fieldRow(`Slide ${i+1} · image URL`,`hero.slides.${i}.img`,s.img)}
+      ${fieldRow(`Slide ${i+1} · eyebrow`,`hero.slides.${i}.eyebrow`,s.eyebrow)}
+      ${fieldRow(`Slide ${i+1} · headline`,`hero.slides.${i}.title`,s.title)}
+      ${fieldRow(`Slide ${i+1} · subtext`,`hero.slides.${i}.sub`,s.sub,true)}
+    `).join("") + `</div>`;
+  html += `<div class="admin-group"><h4>Section intros</h4>
+    ${fieldRow("Women intro","womenSide",WORK.womenSide,true)}
+    ${fieldRow("Men intro","menSide",WORK.menSide,true)}
+    ${fieldRow("Consult heading","consultTitle",WORK.consultTitle)}
+    ${fieldRow("Consult text","consultText",WORK.consultText,true)}
+    ${fieldRow("Consult image URL","images.consult",WORK.images.consult)}
+  </div>`;
+  html += `<div class="admin-group"><h4>Women treatments</h4>` +
+    WORK.women.map((c,i)=>`
+      ${fieldRow(`${i+1} · title`,`women.${i}.title`,c.title)}
+      ${fieldRow(`${i+1} · image URL`,`women.${i}.img`,c.img)}
+      ${fieldRow(`${i+1} · text`,`women.${i}.text`,c.text,true)}
+      ${fieldRow(`${i+1} · price`,`women.${i}.price`,c.price)}
+    `).join("") + `</div>`;
+  html += `<div class="admin-group"><h4>Men treatments</h4>` +
+    WORK.men.map((c,i)=>`
+      ${fieldRow(`${i+1} · title`,`men.${i}.title`,c.title)}
+      ${fieldRow(`${i+1} · image URL`,`men.${i}.img`,c.img)}
+      ${fieldRow(`${i+1} · text`,`men.${i}.text`,c.text,true)}
+      ${fieldRow(`${i+1} · price`,`men.${i}.price`,c.price)}
+    `).join("") + `</div>`;
+  html += `<div class="admin-group"><h4>Before &amp; After (Botox)</h4>` +
+    WORK.beforeAfter.map((p,i)=>`
+      ${fieldRow(`${i+1} · title`,`beforeAfter.${i}.title`,p.title)}
+      ${fieldRow(`${i+1} · note`,`beforeAfter.${i}.note`,p.note)}
+      ${fieldRow(`${i+1} · BEFORE image URL`,`beforeAfter.${i}.before`,p.before)}
+      ${fieldRow(`${i+1} · AFTER image URL`,`beforeAfter.${i}.after`,p.after)}
+    `).join("") + `</div>`;
+  html += `<div class="admin-group"><h4>Gallery</h4>
+    <div class="admin-field"><label>Image URLs (one per line)</label>
+    <textarea data-special="gallery" style="min-height:130px">${WORK.gallery.join("\n")}</textarea></div></div>`;
+  html += `<div class="admin-group"><h4>Packages</h4>` +
+    WORK.packages.map((p,i)=>`
+      ${fieldRow(`${i+1} · name`,`packages.${i}.name`,p.name)}
+      ${fieldRow(`${i+1} · tagline`,`packages.${i}.tagline`,p.tagline)}
+      ${fieldRow(`${i+1} · price`,`packages.${i}.price`,p.price)}
+      ${fieldRow(`${i+1} · billed`,`packages.${i}.per`,p.per)}
+      <div class="admin-field"><label>${i+1} · includes (one per line)</label>
+      <textarea data-special="pack" data-idx="${i}">${p.includes.join("\n")}</textarea></div>
+    `).join("") + `</div>`;
+  html += `<div class="admin-group"><h4>Contact</h4>
+    ${fieldRow("Address","contact.address",WORK.contact.address)}
+    ${fieldRow("Phone (display)","contact.phoneDisplay",WORK.contact.phoneDisplay)}
+  </div>`;
+  b.innerHTML = html;
+  b.querySelectorAll("[data-path]").forEach(inp=>{
+    inp.addEventListener("input", ()=>{
+      const keys = inp.dataset.path.split(".");
+      let o = WORK;
+      for(let i=0;i<keys.length-1;i++) o = o[keys[i]];
+      o[keys.at(-1)] = inp.value;
+    });
+  });
+  b.querySelectorAll("[data-feature]").forEach(inp=>{
+    inp.addEventListener("change", ()=>{ WORK.features[inp.dataset.feature] = inp.checked; });
+  });
+  b.querySelectorAll('[data-special="gallery"]').forEach(t=>{
+    t.addEventListener("input",()=>{ WORK.gallery = t.value.split("\n").map(s=>s.trim()).filter(Boolean); });
+  });
+  b.querySelectorAll('[data-special="pack"]').forEach(t=>{
+    t.addEventListener("input",()=>{ WORK.packages[+t.dataset.idx].includes = t.value.split("\n").map(s=>s.trim()).filter(Boolean); });
+  });
+  const upl = b.querySelector("#upl");
+  if(upl) upl.addEventListener("change", async ()=>{
+    const f = upl.files[0]; if(!f) return;
+    if(f.size > 4*1024*1024){ toast("Image too large \u2014 keep under 4 MB"); return; }
+    const pass = adminPass(); if(!pass) return;
+    toast("Uploading\u2026");
+    const data = await new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result.split(",")[1]); r.readAsDataURL(f); });
+    try{
+      const r = await fetch("/api/upload",{method:"POST",
+        headers:{"Content-Type":"application/json","Authorization":"Bearer "+pass},
+        body:JSON.stringify({name:f.name,type:f.type,data})});
+      if(r.status===401){ sessionStorage.removeItem("uw_admin_pass"); toast("Wrong password"); return; }
+      if(!r.ok) throw 0;
+      const j = await r.json();
+      b.querySelector("#uplOut").classList.remove("hidden");
+      b.querySelector("#uplUrl").value = j.url;
+      try{ await navigator.clipboard.writeText(j.url); }catch(e){}
+      toast("Uploaded \u2014 URL copied");
+    }catch(e){ toast("Upload failed"); }
+  });
+
+}
+function adminPass(){
+  let p = sessionStorage.getItem("uw_admin_pass");
+  if(!p){ p = prompt("Admin password:"); if(p) sessionStorage.setItem("uw_admin_pass", p); }
+  return p;
+}
+async function adminSave(){
+  const pass = adminPass(); if(!pass) return;
+  toast("Publishing\u2026");
+  try{
+    const r = await fetch("/api/config",{method:"POST",
+      headers:{"Content-Type":"application/json","Authorization":"Bearer "+pass},
+      body:JSON.stringify(WORK)});
+    if(r.status===401){ sessionStorage.removeItem("uw_admin_pass"); toast("Wrong password"); return; }
+    if(!r.ok) throw 0;
+    CONFIG = structuredClone(WORK); applyConfig();
+    toast("Published \u2014 live for everyone");
+  }catch(e){ toast("Save failed \u2014 check connection"); }
+}
+function adminExport(){
+  const blob = new Blob([JSON.stringify(WORK,null,2)],{type:"application/json"});
+  const a = Object.assign(document.createElement("a"),{href:URL.createObjectURL(blob),download:"undone-well-config.json"});
+  a.click(); URL.revokeObjectURL(a.href); toast("Config exported");
+}
+function adminReset(){
+  if(!confirm("Reset all fields to defaults? Press Save afterwards to publish.")) return;
+  CONFIG = structuredClone(DEFAULT_CONFIG);
+  WORK = structuredClone(CONFIG);
+  buildAdmin(); applyConfig(); toast("Reset \u2014 press Save to publish");
+}
+
+/* ---------- boot ---------- */
+applyConfig();
+onScroll();
+async function bootSite(){
+  try{
+    const r = await fetch("/api/config",{cache:"no-store"});
+    if(r.ok){
+      const d = await r.json();
+      if(d && typeof d === "object" && Object.keys(d).length){
+        CONFIG = deepMerge(DEFAULT_CONFIG, d);
+        WORK = structuredClone(CONFIG);
+        applyConfig();
+      }
+    }
+  }catch(e){ /* first deploy or offline \u2014 defaults shown */ }
+  if(isAdmin){ $("#adminFab").classList.remove("hidden"); buildAdmin(); }
+}
+bootSite();
+
+/* ============================================================
+   v3 — page rendering, router, before/after slider
+   ============================================================ */
+function renderExtras(){
+  renderCards("injCards", CONFIG.injectables, "Book");
+  renderCards("facCards", CONFIG.facials, "Book");
+  renderCards("skinCards", CONFIG.skinTreatments, "Book");
+  renderBA("baHome", CONFIG.beforeAfter.slice(0,2));
+  renderBA("baGallery", CONFIG.beforeAfter);
+  renderGallery();
+  renderPackages();
+}
+function renderBA(id, items){
+  const host = document.getElementById(id); if(!host) return;
+  host.innerHTML = items.map(p=>`
+    <div class="ba-item reveal">
+      <div class="ba" style="--pos:50%">
+        <img src="${p.before}" alt="Before — ${p.title}" loading="lazy" onerror="this.remove()">
+        <img class="after-img" src="${p.after}" alt="After — ${p.title}" loading="lazy" onerror="this.remove()">
+        <span class="lab lab-b">Before</span><span class="lab lab-a">After</span>
+        <div class="ba-bar"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after — ${p.title}">
+      </div>
+      <div class="ba-cap"><h3>${p.title}</h3><span>${p.note}</span></div>
+    </div>`).join("");
+  host.querySelectorAll(".ba input[type=range]").forEach(r=>{
+    r.addEventListener("input", ()=> r.parentElement.style.setProperty("--pos", r.value+"%"));
+  });
+}
+function renderGallery(){
+  const host = document.getElementById("galGrid"); if(!host) return;
+  host.innerHTML = CONFIG.gallery.map((u,i)=>`
+    <figure class="reveal"><img src="${u}" alt="Undone Well gallery image ${i+1}" loading="lazy" onerror="this.parentElement.remove()"></figure>`).join("");
+}
+function renderPackages(){
+  const host = document.getElementById("packGrid"); if(!host) return;
+  host.innerHTML = CONFIG.packages.map(p=>`
+    <div class="pack reveal${p.featured?" featured":""}">
+      ${p.featured?`<span class="pill">Most Popular</span>`:""}
+      <h3>${p.name}</h3>
+      <p class="tagline">${p.tagline}</p>
+      <div class="pack-price">${p.price}<small>${p.per}</small></div>
+      <ul>${p.includes.map(i=>`<li>${i}</li>`).join("")}</ul>
+      <a href="${CONFIG.links.booking}" target="_blank" rel="noopener" class="btn ${p.featured?"btn-gold":"btn-solid"}">Book This <span class="arrow">→</span></a>
+    </div>`).join("");
+}
+
+/* ---------- hash router ---------- */
+const ROUTES = { "/":"home","/gallery":"gallery","/injectables":"injectables","/facials":"facials",
+  "/skin":"skin","/packages":"packages","/alle":"alle","/team":"team","/contact":"contact","/payment":"payment" };
+function showPage(name){
+  $$(".page").forEach(p=>p.classList.toggle("active", p.dataset.page===name));
+  document.body.classList.toggle("subpage", name!=="home");
+  closeMenu(); onScroll(); observeReveals();
+  if(name==="home") restartAuto(); else clearInterval(slideTimer);
+}
+function route(){
+  const h = location.hash;
+  if(h.startsWith("#/")){
+    showPage(ROUTES[h.slice(1)] || "home");
+    scrollTo({top:0, behavior:"instant"});
+  } else if(h.length>1){
+    // plain anchor (e.g. #women, #consult) → ensure home is shown, then scroll
+    const wasHome = $('[data-page="home"]').classList.contains("active");
+    showPage("home");
+    const el = document.getElementById(h.slice(1));
+    if(el) setTimeout(()=>el.scrollIntoView({behavior: wasHome ? "smooth" : "instant"}), wasHome?0:60);
+  } else {
+    showPage("home"); scrollTo({top:0, behavior:"instant"});
+  }
+}
+addEventListener("hashchange", route);
+route();
+
+</script>
+</body>
+</html>
