@@ -3,111 +3,113 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Private Consultation | Undone Well.</title>
-<meta name="description" content="Begin your personalized consultation with Undone Well Medical Aesthetics in San Diego.">
-<meta name="theme-color" content="#fbfaf7">
+<title>Book a Consultation | Undone Well.</title>
+<meta name="description" content="Request your consultation with Undone Well Medical Aesthetics.">
+<meta name="theme-color" content="#f6f5f2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Italiana&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#fbfaf7;--warm:#f5f1ea;--paper:#fff;--ink:#1c1b19;--muted:#77736d;--line:#e9e3da;--gold:#aa8d60;--gold2:#c8b18b;--shadow:0 30px 90px rgba(47,39,29,.08);}
-*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
-body{background:var(--ivory);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none} .wrap{width:min(1220px,calc(100% - 48px));margin:auto}
-header{height:94px;background:rgba(251,250,247,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(170,141,96,.16);display:flex;align-items:center;position:relative;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;width:100%}
-.logo img{display:block;width:210px;max-height:48px;object-fit:contain;object-position:left center}
-.back{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#716b63;display:flex;gap:12px;align-items:center}
-.back i{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-style:normal;transition:.3s;background:#fff}
-.back:hover i{transform:translateX(3px);border-color:var(--gold)}
+:root{--bg:#f6f5f2;--card:#fff;--ink:#171817;--muted:#72756f;--line:#e5e5e0;--soft:#f1f0ec;--accent:#9b8058;--green:#7d9274;--shadow:0 18px 55px rgba(20,20,18,.07)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none} .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+header{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.logo img{width:190px;max-height:42px;display:block;object-fit:contain;object-position:left}
+.exit{display:flex;align-items:center;gap:10px;color:#666a64;font-size:12px}
+.exit i{font-style:normal;width:34px;height:34px;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center;background:#fff}
 
-.hero{position:relative;padding:105px 0 86px;overflow:hidden;text-align:center}
-.hero:before{content:"";position:absolute;left:50%;top:-350px;transform:translateX(-50%);width:850px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(213,195,164,.19),transparent 66%);pointer-events:none}
-.eyebrow{position:relative;display:inline-flex;align-items:center;gap:14px;color:var(--gold);font-size:10px;letter-spacing:.27em;text-transform:uppercase;margin-bottom:28px}
-.eyebrow:before,.eyebrow:after{content:"";width:32px;height:1px;background:var(--gold2)}
-h1{position:relative;font-family:"Italiana",serif;font-size:clamp(52px,7.5vw,96px);font-weight:400;line-height:.98;letter-spacing:-.025em;max-width:900px;margin:0 auto 29px}
-.hero p{position:relative;max-width:610px;margin:auto;color:var(--muted);font-size:14px;line-height:1.85}
-.hero-meta{display:flex;justify-content:center;gap:35px;margin-top:39px;color:#8b857d;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase}
-.hero-meta span{display:flex;align-items:center;gap:9px} .hero-meta b{width:4px;height:4px;border-radius:50%;background:var(--gold);display:inline-block}
+.page{padding:38px 0 75px}
+.heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:25px}
+.heading small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.heading h1{font-size:30px;font-weight:500;letter-spacing:-.035em}
+.heading p{font-size:12.5px;color:var(--muted);max-width:440px;line-height:1.6;text-align:right}
 
-.booking{padding:0 0 110px}
-.booking-shell{background:var(--paper);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;max-width:1060px;margin:auto}
-.booking-top{padding:34px 42px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:25px;background:linear-gradient(180deg,#fff,#fffdfa)}
-.booking-title small{display:block;color:var(--gold);font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:9px}
-.booking-title h2{font-family:"Manrope";font-size:25px;font-weight:400;letter-spacing:-.025em}
-.status{display:flex;align-items:center;gap:9px;color:#716d67;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-.status i{width:8px;height:8px;border-radius:50%;background:#a9b99d;box-shadow:0 0 0 5px rgba(169,185,157,.13)}
+.booking-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:20px;align-items:start}
+.sidebar{background:#fff;border:1px solid var(--line);border-radius:16px;padding:21px;position:sticky;top:20px}
+.sidebar-title{font-size:11px;font-weight:600;margin-bottom:20px;text-transform:uppercase;letter-spacing:.08em;color:#555953}
+.steps{display:grid;gap:4px}
+.step{display:flex;gap:12px;padding:12px 10px;border-radius:11px;position:relative}
+.step.active{background:var(--soft)}
+.step-num{width:28px;height:28px;border:1px solid #d9d9d3;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:600;background:#fff;flex:0 0 auto}
+.step.active .step-num{background:var(--ink);color:#fff;border-color:var(--ink)}
+.step b{display:block;font-size:11.5px;font-weight:500;margin:2px 0 2px}
+.step span{font-size:9.5px;color:#8b8e88}
+.help{border-top:1px solid var(--line);margin-top:18px;padding-top:18px}
+.help b{display:block;font-size:11px;font-weight:500;margin-bottom:5px}
+.help p{font-size:10px;color:#888b85;line-height:1.5}
 
-.steps{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);background:#fcfbf8}
-.step{padding:20px 28px;display:flex;gap:13px;align-items:center;border-right:1px solid var(--line)} .step:last-child{border-right:0}
-.num{width:29px;height:29px;border-radius:50%;border:1px solid #ddd4c7;display:grid;place-items:center;font:500 9px "DM Sans";color:var(--gold);background:#fff}
-.step b{display:block;font-size:11px;font-weight:500;margin-bottom:2px} .step span{font-size:9.5px;color:#99938b}
-.form-zone{padding:22px 32px 32px;background:#fff}
-.frame-box{border:1px solid #eee9e1;border-radius:22px;overflow:hidden;background:#fff;position:relative}
-.frame-box:before{content:"";display:block;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);opacity:.55}
-iframe{display:block;width:100%;min-height:1120px;border:0;background:#fff}
-.trust{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:22px;color:#8b857e;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase}
-.trust span{display:flex;align-items:center;gap:7px} .trust i{font-style:normal;color:var(--gold)}
+.booking-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.card-head{padding:21px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.card-head h2{font-size:17px;font-weight:500;letter-spacing:-.02em;margin-bottom:4px}
+.card-head p{font-size:10.5px;color:#858983}
+.secure{display:flex;align-items:center;gap:8px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#747872}
+.secure i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(125,146,116,.12)}
+.frame-pad{padding:8px}
+.frame{border:1px solid #efeee9;border-radius:12px;overflow:hidden;background:#fff}
+iframe{width:100%;min-height:1120px;border:0;display:block;background:#fff}
 
-.after{max-width:800px;margin:70px auto 0;text-align:center}
-.after .line{width:1px;height:46px;background:linear-gradient(var(--gold2),transparent);margin:0 auto 22px}
-.after h3{font:400 31px "Italiana";margin-bottom:14px}
-.after p{color:var(--muted);font-size:12.5px;line-height:1.8;max-width:600px;margin:auto}
+.bottom-info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+.info{background:#fff;border:1px solid var(--line);border-radius:13px;padding:15px 16px;display:flex;gap:11px;align-items:flex-start}
+.info .icon{width:29px;height:29px;border-radius:8px;background:var(--soft);display:grid;place-items:center;font-size:11px;color:var(--accent);flex:0 0 auto}
+.info b{display:block;font-size:10.5px;font-weight:500;margin-bottom:2px}
+.info p{font-size:9.5px;color:#8b8e88;line-height:1.45}
+footer{padding:25px 0 35px;color:#8b8e88;font-size:9.5px}
+.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px}
 
-footer{border-top:1px solid var(--line);padding:34px 0 42px;background:#f8f6f1}
-.foot{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
-.foot img{width:155px;max-height:38px;object-fit:contain;object-position:left}
-.foot-copy{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8b857e}
-.foot-links{display:flex;gap:22px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#716d67}
-
-@media(max-width:700px){
- .wrap{width:min(100% - 28px,1220px)} header{height:78px} .logo img{width:170px} .back span{display:none}
- .hero{padding:72px 0 62px} h1{font-size:54px;line-height:1} .hero p{font-size:13px}
- .hero-meta{gap:13px;flex-wrap:wrap;margin-top:30px;font-size:8.5px}
- .booking-shell{border-radius:21px} .booking-top{padding:25px 20px} .booking-title h2{font-size:21px} .status{display:none}
- .steps{grid-template-columns:1fr} .step{border-right:0;border-bottom:1px solid var(--line);padding:15px 20px} .step:last-child{border-bottom:0}
- .form-zone{padding:8px 7px 20px} .frame-box{border-radius:14px} iframe{min-height:1250px}
- .trust{gap:12px;font-size:8px;padding:0 10px} .after{margin-top:52px;padding:0 20px}
- .foot{justify-content:center;text-align:center} .foot-links{justify-content:center;width:100%}
+@media(max-width:800px){
+ header{height:68px} .logo img{width:165px} .exit span{display:none}
+ .page{padding:27px 0 55px} .heading{display:block;margin-bottom:18px} .heading h1{font-size:26px}
+ .heading p{text-align:left;margin-top:8px}
+ .booking-layout{grid-template-columns:1fr} .sidebar{position:static;padding:12px}
+ .sidebar-title,.help{display:none} .steps{grid-template-columns:repeat(3,1fr);gap:4px}
+ .step{padding:8px 6px;align-items:center} .step span{display:none} .step b{font-size:9.5px} .step-num{width:24px;height:24px;font-size:9px}
+ .card-head{padding:18px 17px} .secure{display:none} .frame-pad{padding:4px}
+ iframe{min-height:1250px} .bottom-info{grid-template-columns:1fr} .foot{display:block;line-height:2}
 }
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
 <a class="logo" href="/"><img src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/IMG_0648_1.png?v=1786043343" alt="Undone Well."></a>
-<a class="back" href="/"><span>Return to website</span><i>→</i></a>
+<a class="exit" href="/"><span>Exit booking</span><i>×</i></a>
 </div></header>
 
-<section class="hero"><div class="wrap">
-<div class="eyebrow">Private Consultation</div>
-<h1>Begin your personalized<br>care journey.</h1>
-<p>Exceptional results begin with a thoughtful conversation. Share your goals with our team and we'll help guide you toward care designed specifically for you.</p>
-<div class="hero-meta"><span><b></b> Personalized care</span><span><b></b> Private & secure</span><span><b></b> San Diego</span></div>
-</div></section>
+<main class="page"><div class="wrap">
+<div class="heading">
+<div><small>Consultation Booking</small><h1>Request an appointment</h1></div>
+<p>Complete your consultation request below. Our team will review your information and contact you to coordinate the next step.</p>
+</div>
 
-<main class="booking"><div class="wrap">
-<section class="booking-shell">
-<div class="booking-top"><div class="booking-title"><small>Undone Well. Concierge</small><h2>Request your consultation</h2></div><div class="status"><i></i> Secure form</div></div>
+<div class="booking-layout">
+<aside class="sidebar">
+<div class="sidebar-title">Your booking</div>
 <div class="steps">
-<div class="step"><div class="num">01</div><div><b>Tell us about you</b><span>Share your details & goals</span></div></div>
-<div class="step"><div class="num">02</div><div><b>Personal review</b><span>Our team reviews your request</span></div></div>
-<div class="step"><div class="num">03</div><div><b>We connect</b><span>Receive your personalized next step</span></div></div>
+<div class="step active"><div class="step-num">1</div><div><b>Your information</b><span>Contact details & preferences</span></div></div>
+<div class="step"><div class="step-num">2</div><div><b>Team review</b><span>We review your request</span></div></div>
+<div class="step"><div class="step-num">3</div><div><b>Confirmation</b><span>We'll contact you directly</span></div></div>
 </div>
-<div class="form-zone">
-<div class="frame-box">
+<div class="help"><b>Need assistance?</b><p>Our team is available to help with your consultation request.</p></div>
+</aside>
+
+<section>
+<div class="booking-card">
+<div class="card-head"><div><h2>Consultation details</h2><p>Please provide the information requested below.</p></div><div class="secure"><i></i> Secure</div></div>
+<div class="frame-pad"><div class="frame">
 <iframe data-lms-form referrerpolicy="unsafe-url" src="https://lmsforms.zenoti.com?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb3JtX2lkIjoiM2EwNzM3NWEtNTJjYS00ZTYzLTkzNjMtODhjOTRmYjdjZmU5IiwiYXBpX3VybCI6Imh0dHBzOi8vYXBpYW1yczA1Lnplbm90aS5jb20iLCJqdGkiOiJjNjkzYzA5MS1mODI0LTQxZGItYTc2MC1lNzJhYjYwOWMwM2QiLCJpYXQiOjE3ODYwMzYwODgsIm5iZiI6MTc4NjAzNjA4OCwiZXhwIjoxNzg2MDM5Njg4fQ.Bl5lYA2xWS6V7_XHWX4Bm2jA4Ycsq9gLFR4wVE46wC-q99-K1CBTrn3b3-ee9OYyJQGnR2rPr9P72a9L1hZqsw&transparent=true" frameborder="0" title="Undone Well Consultation Form" loading="eager"></iframe>
+</div></div>
 </div>
-<div class="trust"><span><i>◇</i> Confidential request</span><span><i>◇</i> Securely powered by Zenoti</span><span><i>◇</i> Personalized follow-up</span></div>
+
+<div class="bottom-info">
+<div class="info"><div class="icon">01</div><div><b>Private & secure</b><p>Your request is submitted securely through Zenoti.</p></div></div>
+<div class="info"><div class="icon">02</div><div><b>Personally reviewed</b><p>The Undone Well team reviews your consultation details.</p></div></div>
+<div class="info"><div class="icon">03</div><div><b>Direct follow-up</b><p>Our team contacts you regarding your next step.</p></div></div>
 </div>
 </section>
-
-<section class="after"><div class="line"></div><h3>Care, considered from the very beginning.</h3><p>Submitting this form sends a consultation request to the Undone Well team. Your appointment is confirmed only after our team connects with you.</p></section>
+</div>
 </div></main>
 
-<footer><div class="wrap foot">
-<img src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/IMG_0648_1.png?v=1786043343" alt="Undone Well.">
-<div class="foot-copy">Medical Aesthetics · Bankers Hill, San Diego</div>
-<div class="foot-links"><a href="/">Home</a><a href="mailto:hello@undonewell.com">Contact</a></div>
-</div></footer>
+<footer><div class="wrap foot"><span>© Undone Well. Medical Aesthetics</span><span>Bankers Hill · San Diego, California</span></div></footer>
 <script src="https://lmsforms.zenoti.com/lms-attribution.js" async></script>
 </body></html>
