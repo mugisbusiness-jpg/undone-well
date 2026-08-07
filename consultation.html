@@ -1,155 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultation | Undone Well.</title>
-<meta name="description" content="Request a personalized consultation with Undone Well Medical Aesthetics in Bankers Hill, San Diego.">
-<meta name="theme-color" content="#2E2C28">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book a Consultation | Undone Well.</title>
+<meta name="description" content="Request a private consultation with Undone Well Medical Aesthetics.">
+<meta name="theme-color" content="#0e0f0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#F0EFEA;--cream-deep:#E7E4DC;--terracotta:#C07A5B;
-  --charcoal:#67645E;--ink:#2E2C28;--gold:#B99668;--white:#FCFBF8;
-  --serif:'Playfair Display',Georgia,serif;--sans:'Space Grotesk',system-ui,sans-serif;
-  --ease:cubic-bezier(.22,.72,.24,1);
+ --bg:#f7f7f4;--paper:#fff;--ink:#101111;--muted:#6d706d;--line:#e7e7e2;
+ --soft:#f0f0eb;--accent:#a78d63;--dark:#0e0f0f;--r:24px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-weight:300;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
-.announce{background:var(--ink);color:var(--cream);font-size:10px;letter-spacing:.28em;text-transform:uppercase;text-align:center;padding:11px 16px}
-header{position:sticky;top:0;z-index:50;background:rgba(240,239,234,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(103,100,94,.14)}
-.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1}
-.logo s{text-decoration-thickness:1.5px}
-.logo span{display:block;font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:5px}
-.navlinks{display:flex;align-items:center;gap:30px}
-.navlinks a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal)}
-.navlinks a:hover{color:var(--terracotta)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:14px 25px;border-radius:999px;background:var(--ink);color:var(--cream);transition:.3s}
-.btn:hover{background:var(--terracotta)}
-
-.hero{position:relative;overflow:hidden;background:var(--ink);color:var(--cream);padding:clamp(82px,10vw,142px) 0 clamp(70px,8vw,112px)}
-.hero:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;right:-240px;top:-380px;background:radial-gradient(circle,rgba(192,122,91,.32),rgba(192,122,91,0) 68%)}
-.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(185,150,104,.55),transparent)}
-.hero-inner{position:relative;z-index:2;max-width:850px}
-.eyebrow{display:flex;align-items:center;gap:14px;font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
-h1,h2{font-family:var(--serif);font-weight:500;line-height:1.03}
-h1{font-size:clamp(48px,7vw,92px);letter-spacing:-.02em;margin-bottom:24px}
-h1 em{font-weight:400;color:var(--gold)}
-.hero p{max-width:58ch;color:rgba(240,239,234,.72);font-size:clamp(15px,1.3vw,18px)}
-
-.main{padding:clamp(62px,8vw,110px) 0}
-.intro{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(30px,6vw,90px);align-items:start;margin-bottom:42px}
-.intro h2{font-size:clamp(34px,4vw,58px);letter-spacing:-.01em}
-.intro-copy{color:var(--charcoal);font-size:15px;max-width:60ch;padding-top:8px}
-.intro-copy strong{color:var(--ink);font-weight:500}
-
-.form-shell{position:relative;background:var(--white);border:1px solid rgba(103,100,94,.16);border-radius:28px;padding:clamp(10px,2vw,24px);box-shadow:0 35px 80px -55px rgba(46,44,40,.5);overflow:hidden}
-.form-shell:before{content:"";display:block;height:3px;width:92px;background:var(--gold);border-radius:99px;margin:2px auto 14px}
-.form-inner{border-radius:20px;overflow:hidden;background:#fff}
-iframe{display:block;width:100%;min-height:1100px;border:0;background:transparent}
-.note{display:flex;justify-content:center;gap:10px;align-items:center;color:var(--charcoal);font-size:11px;letter-spacing:.08em;margin-top:20px;text-align:center}
-.note i{width:5px;height:5px;border-radius:50%;background:var(--gold);display:block}
-
-footer{background:var(--ink);color:rgba(240,239,234,.72);padding:58px 0 34px;margin-top:clamp(64px,8vw,110px)}
-.foot{display:flex;justify-content:space-between;gap:36px;align-items:flex-end;flex-wrap:wrap}
-footer .logo{color:var(--cream)}
-.foot p{font-size:13px;max-width:38ch;margin-top:16px}
-.footlinks{display:flex;gap:24px;flex-wrap:wrap}
-.footlinks a{font-size:10px;letter-spacing:.2em;text-transform:uppercase}
-.footlinks a:hover{color:var(--gold)}
-.copy{border-top:1px solid rgba(240,239,234,.14);margin-top:34px;padding-top:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(240,239,234,.42)}
-
-@media(max-width:760px){
-  .nav{height:72px} .navlinks>a:not(.btn){display:none} .navlinks{gap:0}
-  .btn{padding:12px 18px;font-size:9.5px} .logo{font-size:22px}
-  .hero{padding:68px 0 66px} h1{font-size:clamp(44px,14vw,62px)}
-  .intro{grid-template-columns:1fr;gap:18px} .intro-copy{padding-top:0}
-  .form-shell{border-radius:18px;padding:6px} .form-inner{border-radius:14px}
-  iframe{min-height:1200px}
-  .foot{align-items:flex-start;flex-direction:column}
+.shell{max-width:1240px;margin:auto;padding:0 28px}
+.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.11);position:absolute;top:0;left:0;right:0;z-index:5;color:#fff}
+.topbar .shell{width:100%;display:flex;align-items:center;justify-content:space-between}
+.brand img{display:block;width:min(285px,43vw);height:auto;filter:brightness(0) invert(1)}
+.back{font-size:12px;letter-spacing:.08em;display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.72);transition:.25s}
+.back:hover{color:#fff;transform:translateX(-3px)}
+.hero{background:var(--dark);color:#fff;min-height:520px;position:relative;overflow:hidden;padding:154px 0 92px}
+.hero:before{content:"";position:absolute;right:-13%;top:-58%;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(167,141,99,.25),transparent 64%)}
+.hero:after{content:"";position:absolute;left:55%;top:0;width:1px;height:100%;background:linear-gradient(transparent,rgba(255,255,255,.09),transparent);transform:rotate(18deg)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}
+.kicker{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#c9b48e;margin-bottom:25px;display:flex;align-items:center;gap:12px}
+.kicker:before{content:"";width:28px;height:1px;background:#c9b48e}
+h1{font-family:"Manrope",sans-serif;font-weight:300;font-size:clamp(48px,6.2vw,86px);line-height:.98;letter-spacing:-.055em;max-width:780px}
+.hero-copy{color:rgba(255,255,255,.64);font-size:15px;line-height:1.75;max-width:410px;padding-bottom:7px}
+.hero-copy b{display:block;color:#fff;font-size:13px;font-weight:500;margin-bottom:10px;letter-spacing:.03em}
+.main{padding:58px 0 100px}
+.booking-grid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:32px;align-items:start}
+.side{position:sticky;top:26px}
+.step-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8a8c88;margin-bottom:15px}
+.progress{display:flex;align-items:center;margin-bottom:34px}
+.progress span{height:2px;flex:1;background:#deded8}
+.progress span:first-child{background:var(--ink)}
+.info-card{background:var(--dark);color:#fff;border-radius:22px;padding:27px}
+.info-card h3{font:500 16px "Manrope";margin-bottom:18px}
+.info{display:grid;gap:18px}
+.info-row{display:flex;gap:13px;align-items:flex-start}
+.ico{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;flex:0 0 auto;font-size:14px;color:#c9b48e}
+.info-row b{font-size:12px;font-weight:500;display:block;margin-bottom:3px}
+.info-row p{font-size:11.5px;color:rgba(255,255,255,.56);line-height:1.5}
+.secure{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:10.5px;color:rgba(255,255,255,.46);display:flex;gap:8px;align-items:center}
+.form-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 24px 70px rgba(22,22,20,.07);overflow:hidden}
+.form-head{padding:29px 34px 25px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;align-items:center}
+.form-head h2{font:500 clamp(22px,2.2vw,30px) "Manrope";letter-spacing:-.025em;margin-bottom:6px}
+.form-head p{font-size:12.5px;color:var(--muted)}
+.badge{white-space:nowrap;background:var(--soft);border-radius:999px;padding:9px 13px;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#656761}
+.frame-wrap{padding:12px 18px 22px}
+iframe{width:100%;min-height:1120px;border:0;display:block;background:#fff;border-radius:15px}
+.after{max-width:760px;margin:35px auto 0;text-align:center}
+.after h3{font:500 17px "Manrope";margin-bottom:8px}
+.after p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.footer{border-top:1px solid var(--line);padding:27px 0 35px;color:#777a76}
+.footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10.5px}
+.footer a:hover{color:var(--ink)}
+@media(max-width:900px){
+ .hero{min-height:auto;padding:138px 0 70px} .hero-grid{grid-template-columns:1fr;gap:30px}
+ .hero-copy{max-width:560px} .booking-grid{grid-template-columns:1fr} .side{position:static}
+ .info-card{display:none} .progress{margin-bottom:0} .main{padding-top:32px}
+}
+@media(max-width:600px){
+ .shell{padding:0 16px} .topbar{height:72px} .brand img{width:210px}
+ .back span{display:none} .hero{padding:120px 0 58px} h1{font-size:46px}
+ .hero-copy{font-size:13.5px} .booking-grid{gap:20px}
+ .form-card{border-radius:18px} .form-head{padding:22px 19px;align-items:flex-start}
+ .badge{display:none} .frame-wrap{padding:4px 5px 15px} iframe{min-height:1250px;border-radius:12px}
+ .after{padding:0 14px} .footer .shell{display:block;line-height:2}
 }
 </style>
 </head>
 <body>
-<div class="announce">PERSONALIZED AESTHETICS · BANKERS HILL, SAN DIEGO</div>
-
-<header>
-  <nav class="nav wrap">
-    <a class="logo" href="/"><s>Un</s>done Well.<span>Medical Aesthetics</span></a>
-    <div class="navlinks">
-      <a href="/#/injectables">Services</a>
-      <a href="/#/about">About</a>
-      <a href="/#/contact">Contact</a>
-      <a class="btn" href="#consultation-form">Begin Consultation →</a>
-    </div>
-  </nav>
+<header class="topbar">
+ <div class="shell">
+  <a class="brand" href="/" aria-label="Undone Well home"><img src="undonewell-logo.png" alt="Undone Well."></a>
+  <a class="back" href="/"><span>Back to website</span> <b>↗</b></a>
+ </div>
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="hero-inner">
-      <div class="eyebrow">Your journey starts here</div>
-      <h1>Begin Your <em>Consultation.</em></h1>
-      <p>Thoughtful care begins with understanding you. Tell us a little about yourself and what you would like to explore. Our team will review your request and guide you toward a personalized next step.</p>
-    </div>
+ <div class="shell hero-grid">
+  <div>
+   <div class="kicker">Private consultation</div>
+   <h1>Your next step,<br>thoughtfully planned.</h1>
   </div>
+  <div class="hero-copy">
+   <b>Start with a conversation.</b>
+   Tell us what you're interested in and what you'd like to achieve. Your request goes directly to the Undone Well team for personalized follow-up.
+  </div>
+ </div>
 </section>
 
-<main class="main" id="consultation-form">
-  <div class="wrap">
-    <section class="intro">
-      <div>
-        <div class="eyebrow">Request a consultation</div>
-        <h2>Designed around <em style="font-weight:400;color:var(--terracotta)">you.</em></h2>
-      </div>
-      <div class="intro-copy">
-        <p><strong>No two treatment plans should feel the same.</strong> Complete the secure form below and the Undone Well team will use your information to help coordinate your consultation.</p>
-      </div>
-    </section>
+<main class="main">
+ <div class="shell booking-grid">
+  <aside class="side">
+   <div class="step-label">Consultation request</div>
+   <div class="progress" aria-hidden="true"><span></span><span></span><span></span></div>
+   <div class="info-card">
+    <h3>What happens next</h3>
+    <div class="info">
+     <div class="info-row"><div class="ico">01</div><div><b>Share your goals</b><p>Complete the secure consultation form.</p></div></div>
+     <div class="info-row"><div class="ico">02</div><div><b>We review your request</b><p>Our team considers the details you provide.</p></div></div>
+     <div class="info-row"><div class="ico">03</div><div><b>Personalized follow-up</b><p>We'll connect with you regarding the appropriate next step.</p></div></div>
+    </div>
+    <div class="secure">⌁ &nbsp; Secure form powered by Zenoti</div>
+   </div>
+  </aside>
 
-    <section class="form-shell" aria-label="Zenoti consultation form">
-      <div class="form-inner">
-        <iframe
-          data-lms-form
-          referrerpolicy="unsafe-url"
-          src="https://lmsforms.zenoti.com?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb3JtX2lkIjoiM2EwNzM3NWEtNTJjYS00ZTYzLTkzNjMtODhjOTRmYjdjZmU5IiwiYXBpX3VybCI6Imh0dHBzOi8vYXBpYW1yczA1Lnplbm90aS5jb20iLCJqdGkiOiJjNjkzYzA5MS1mODI0LTQxZGItYTc2MC1lNzJhYjYwOWMwM2QiLCJpYXQiOjE3ODYwMzYwODgsIm5iZiI6MTc4NjAzNjA4OCwiZXhwIjoxNzg2MDM5Njg4fQ.Bl5lYA2xWS6V7_XHWX4Bm2jA4Ycsq9gLFR4wVE46wC-q99-K1CBTrn3b3-ee9OYyJQGnR2rPr9P72a9L1hZqsw&transparent=true"
-          width="100%"
-          frameborder="0"
-          style="border:none;min-height:1100px;"
-          title="Undone Well Consultation Form"
-          loading="lazy">
-        </iframe>
-      </div>
-    </section>
+  <section class="form-card">
+   <div class="form-head">
+    <div><h2>Request your consultation</h2><p>Please complete the details below to get started.</p></div>
+    <div class="badge">Secure request</div>
+   </div>
+   <div class="frame-wrap">
+    <iframe data-lms-form referrerpolicy="unsafe-url" src="https://lmsforms.zenoti.com?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb3JtX2lkIjoiM2EwNzM3NWEtNTJjYS00ZTYzLTkzNjMtODhjOTRmYjdjZmU5IiwiYXBpX3VybCI6Imh0dHBzOi8vYXBpYW1yczA1Lnplbm90aS5jb20iLCJqdGkiOiJjNjkzYzA5MS1mODI0LTQxZGItYTc2MC1lNzJhYjYwOWMwM2QiLCJpYXQiOjE3ODYwMzYwODgsIm5iZiI6MTc4NjAzNjA4OCwiZXhwIjoxNzg2MDM5Njg4fQ.Bl5lYA2xWS6V7_XHWX4Bm2jA4Ycsq9gLFR4wVE46wC-q99-K1CBTrn3b3-ee9OYyJQGnR2rPr9P72a9L1hZqsw&transparent=true" frameborder="0" title="Undone Well Consultation Form" loading="eager"></iframe>
+   </div>
+  </section>
+ </div>
 
-    <div class="note"><i></i><span>Your consultation request is submitted securely through Zenoti.</span></div>
-  </div>
+ <div class="after">
+  <h3>Personalized care begins before your appointment.</h3>
+  <p>Your answers help the team understand what you're looking for before connecting with you. Submitting this form is a consultation request and does not itself confirm an appointment.</p>
+ </div>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a class="logo" href="/"><s>Un</s>done Well.<span>Medical Aesthetics</span></a>
-        <p>A boutique medspa in Bankers Hill, San Diego — where good medicine meets quiet luxury.</p>
-      </div>
-      <div class="footlinks">
-        <a href="/#/injectables">Services</a>
-        <a href="/#/contact">Contact</a>
-        <a href="mailto:hello@undonewell.com">Email</a>
-      </div>
-    </div>
-    <div class="copy">© Undone Well. Medical Aesthetics · San Diego, California</div>
-  </div>
+<footer class="footer">
+ <div class="shell">
+  <span>© Undone Well. Medical Aesthetics</span>
+  <span>Bankers Hill · San Diego, California</span>
+  <a href="mailto:hello@undonewell.com">hello@undonewell.com</a>
+ </div>
 </footer>
-
 <script src="https://lmsforms.zenoti.com/lms-attribution.js" async></script>
 </body>
 </html>
