@@ -1151,6 +1151,7 @@ function teamRoleRemove(i){
   <div class="mm-group">
     <button onclick="this.parentElement.classList.toggle('open')">About <span class="caret">▾</span></button>
     <div class="mm-sub">
+      <a href="#/about" onclick="closeMenu()">Who We Are</a>
       <a href="#/contact" onclick="closeMenu()">Contact</a>
       <a href="#/team" onclick="closeMenu()">Join Our Team</a>
       <a href="#/collab" onclick="closeMenu()">Collaboration Inquiry</a>
@@ -1603,6 +1604,356 @@ function teamRoleRemove(i){
     </div>
   </div></section>
 </div>
+
+<!-- ============ PAGE · ABOUT / WHO WE ARE ============ -->
+<div class="page" data-page="about">
+
+<style>
+  .about-intro{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+  }
+
+  .about-intro h2{
+    margin:10px 0 20px;
+  }
+
+  .about-intro p{
+    max-width:760px;
+    margin:0 auto;
+    line-height:1.8;
+    color:#666;
+  }
+
+  .founder-feature{
+    display:grid;
+    grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr);
+    gap:clamp(35px,6vw,85px);
+    align-items:center;
+    margin-top:70px;
+  }
+
+  .founder-feature img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    display:block;
+  }
+
+  .founder-copy h2{
+    margin:8px 0 8px;
+  }
+
+  .founder-role{
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    color:#777;
+  }
+
+  .founder-copy p{
+    line-height:1.8;
+    color:#555;
+  }
+
+  .team-heading{
+    text-align:center;
+    margin:90px auto 45px;
+  }
+
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:38px 22px;
+  }
+
+  .team-card img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    display:block;
+    margin-bottom:20px;
+  }
+
+  .team-card h3{
+    margin:0 0 6px;
+    font-size:22px;
+  }
+
+  .team-card .role{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.07em;
+    margin-bottom:8px;
+    color:#555;
+  }
+
+  .team-card .detail{
+    font-size:13px;
+    line-height:1.6;
+    color:#777;
+    margin:0;
+  }
+
+  .team-footer{
+    text-align:center;
+    margin-top:55px;
+  }
+
+  @media(max-width:850px){
+    .founder-feature{
+      grid-template-columns:1fr;
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .team-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+  }
+
+  @media(max-width:560px){
+    .team-grid{
+      grid-template-columns:1fr;
+      gap:38px;
+    }
+
+    .team-heading{
+      margin-top:65px;
+    }
+  }
+</style>
+
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">About UNDONE WELL</p>
+
+    <h1>
+      Who <span class="italic">we are</span>
+    </h1>
+
+    <p class="sub">
+      Thoughtful medicine. Natural artistry. A team committed to helping you
+      feel unmistakably like yourself.
+    </p>
+
+    <p class="crumb">
+      <a href="#/">Home</a> · <span>Who We Are</span>
+    </p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap">
+
+    <div class="about-intro reveal">
+      <p class="eyebrow">The UNDONE WELL Philosophy</p>
+
+      <h2>
+        Enhancing, <span class="italic">not changing.</span>
+      </h2>
+
+      <p>
+        UNDONE WELL brings together medical expertise, thoughtful aesthetics
+        and individualized care. We believe the best results begin with
+        understanding the whole person — their anatomy, goals, concerns and
+        how they ultimately want to feel.
+      </p>
+    </div>
+
+
+    <!-- FOUNDER -->
+    <div class="founder-feature reveal">
+
+      <div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-02_23-53-17.jpg?v=1785704017"
+          alt="Ashley Reader - Founder of UNDONE WELL"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="founder-copy">
+
+        <p class="eyebrow">Meet the Founder</p>
+
+        <h2>
+          Ashley <span class="italic">Reader</span>
+        </h2>
+
+        <div class="founder-role">
+          Founder & Medical Director
+        </div>
+
+        <p>
+          Ashley Reader is the founder of UNDONE WELL, a nationally recognized
+          aesthetic nurse injector, educator and speaker with more than a decade
+          of experience in nursing and aesthetic medicine.
+        </p>
+
+        <p>
+          Her approach has never been about simply performing treatments.
+          Ashley believes the best aesthetic medicine starts with understanding
+          the whole person — their anatomy, their goals, what they notice and
+          how they want to feel.
+        </p>
+
+        <p>
+          Her philosophy is rooted in thoughtful medicine, natural artistry
+          and long-term strategy, with an emphasis on results that enhance
+          rather than redefine.
+        </p>
+
+        <p>
+          Known for her comprehensive approach to facial balancing, Ashley
+          creates individualized treatment plans designed to evolve with her
+          patients over time. Education and honest guidance remain central to
+          every consultation — even when the best recommendation is to do less,
+          wait or not treat at all.
+        </p>
+
+        <p class="founder-role" style="margin-top:22px;margin-bottom:0;">
+          Injector · National Trainer & Speaker · Visionary CEO
+        </p>
+
+      </div>
+    </div>
+
+
+    <!-- TEAM -->
+    <div class="team-heading reveal">
+      <p class="eyebrow">The People Behind UNDONE WELL</p>
+      <h2>
+        Meet <span class="italic">the team</span>
+      </h2>
+    </div>
+
+
+    <div class="team-grid">
+
+
+      <!-- LAUREN -->
+      <article class="team-card reveal">
+        <img
+          src="https://i.ibb.co/dsTL2JxG/undonewell-portraits-saucegirl.jpg"
+          alt="Lauren Scheinker"
+          loading="lazy"
+        >
+
+        <h3>Lauren Scheinker</h3>
+
+        <div class="role">
+          Director of Operations
+        </div>
+
+        <p class="detail">
+          Business Operations · Systems · Execution
+        </p>
+      </article>
+
+
+      <!-- HEYLY -->
+      <article class="team-card reveal">
+        <img
+          src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-02_23-54-29.jpg?v=1785704082"
+          alt="Heyly Roman"
+          loading="lazy"
+        >
+
+        <h3>Heyly Roman</h3>
+
+        <div class="role">
+          Associate Injector
+        </div>
+
+        <p class="detail">
+          Patient Educator · Evidence-Based Clinician · Trusted Clinical Leader
+        </p>
+      </article>
+
+
+      <!-- SANDY -->
+      <article class="team-card reveal">
+        <img
+          src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-02_23-56-16.jpg?v=1785704189"
+          alt="Sandy Pantoja"
+          loading="lazy"
+        >
+
+        <h3>Sandy Pantoja</h3>
+
+        <div class="role">
+          Lead Medical Assistant & Esthetician
+        </div>
+
+        <p class="detail">
+          Patient Advocate · Skin Health · Clinical Excellence
+        </p>
+      </article>
+
+
+      <!-- ELLIE -->
+      <article class="team-card reveal">
+        <img
+          src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-02_23-55-31.jpg?v=1785704144"
+          alt="Ellie Davis-Ribeiro"
+          loading="lazy"
+        >
+
+        <h3>Ellie Davis-Ribeiro</h3>
+
+        <div class="role">
+          Medical Esthetician
+        </div>
+
+        <p class="detail">
+          Skin Specialist · Results Driven · Customized Care
+        </p>
+      </article>
+
+
+      <!-- MARTIN -->
+      <article class="team-card reveal">
+        <img
+          src="https://i.ibb.co/nsMFt54W/undonewell-portraits-saucegirl-156.jpg"
+          alt="Martin Somo"
+          loading="lazy"
+        >
+
+        <h3>Martin Somo</h3>
+
+        <div class="role">
+          Patient Coordinator & Medical Assistant
+        </div>
+
+        <p class="detail">
+          Patient Experience · Meaningful Connections · Operational Excellence
+        </p>
+      </article>
+
+    </div>
+
+
+    <div class="team-footer reveal">
+      <a
+        href="https://shop.undonewell.com/pages/meet-our-team"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-solid"
+      >
+        Explore Our Team <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</div>
+  
 
 <!-- ============ PAGE · CONTACT ============ -->
 <div class="page" data-page="contact">
