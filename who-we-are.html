@@ -560,6 +560,79 @@
       text-transform:uppercase;
     }
 
+    /* PHILOSOPHY DOWNLOAD */
+    .philosophy-strip{
+      background:var(--deep);
+      padding:58px 0;
+      border-bottom:1px solid rgba(163,131,40,.22);
+    }
+
+    .philosophy-strip-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:34px;
+    }
+
+    .philosophy-strip .mini-label{
+      margin-bottom:9px;
+    }
+
+    .philosophy-strip h2{
+      margin:0;
+      font-family:var(--serif);
+      font-size:33px;
+      line-height:1.15;
+      font-weight:400;
+      color:#F3EAE3;
+    }
+
+    .philosophy-download{
+      min-height:48px;
+      padding:0 23px;
+      border:1px solid rgba(209,161,55,.55);
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:11px;
+      color:#EADFD6;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      transition:border-color .2s ease,color .2s ease,transform .2s ease;
+    }
+
+    .philosophy-download:hover{
+      border-color:var(--gold-bright);
+      color:#FFF;
+      transform:translateY(-1px);
+    }
+
+    .founder-message{
+      max-width:690px;
+    }
+
+    .founder-message p{
+      margin:0 0 20px;
+    }
+
+    .founder-message strong{
+      color:#F4E9E1;
+      font-weight:600;
+    }
+
+    .never-done-inline{
+      margin:31px 0 0 !important;
+      color:var(--gold-bright) !important;
+      font-size:10px !important;
+      font-weight:700;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
     /* FOUNDER */
     .founder{
       background:var(--charcoal);
@@ -876,6 +949,8 @@
       .desktop-nav,.header-actions{display:none}
       .menu-btn{display:block}
       .hero{min-height:470px}
+      .philosophy-strip-inner{flex-direction:column;align-items:flex-start}
+      .philosophy-strip h2{font-size:29px}
       .hero h1{font-size:66px}
       .intro-grid,.founder-grid,.founder-note-grid{grid-template-columns:1fr;gap:48px}
       .founder-note-intro{position:static}
@@ -899,6 +974,8 @@
       .announcement{height:auto;min-height:32px;padding:8px 14px;line-height:1.5}
       .brand{font-size:12px}
       .hero{min-height:420px}
+      .philosophy-strip{padding:48px 0}
+      .philosophy-download{width:100%;white-space:normal;text-align:center}
       .hero-content{padding:64px 0}
       .hero h1{font-size:57px}
       .hero-sub{font-size:14px}
@@ -1040,88 +1117,22 @@
     </section>
 
 
-    <!-- FOUNDER NOTE -->
-    <section class="founder-note">
-      <div class="wrap founder-note-grid">
-
-        <div class="founder-note-intro reveal">
-          <p class="mini-label">A Note From Our Founder</p>
-
-          <h2 class="section-title">
-            This isn’t just our name.<br>
-            <span class="italic">It’s our promise.</span>
-          </h2>
-
-          <p class="founder-note-small">
-            A personal note from Ashley on why UNDONE WELL was created and what the brand stands for.
-          </p>
-
-          <a
-            class="philosophy-download"
-            href="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/PHILOSOPHY_MISSION_2.pdf?v=1786453384"
-            target="_blank"
-            rel="noopener"
-          >
-            Download Our Philosophy &amp; Mission <span>↗</span>
-          </a>
+    <!-- PHILOSOPHY DOWNLOAD -->
+    <section class="philosophy-strip">
+      <div class="wrap philosophy-strip-inner reveal">
+        <div>
+          <p class="mini-label">Our Philosophy</p>
+          <h2>Read our philosophy &amp; mission.</h2>
         </div>
 
-        <div class="founder-letter reveal">
-          <p>
-            If you’ve followed my journey, you know I’ve always worked to create something that feels different.
-          </p>
-
-          <p class="letter-emphasis">
-            Not just another aesthetic practice.
-          </p>
-
-          <p>
-            A place where confidence isn’t created by changing who you are—but by protecting what makes you uniquely you.
-          </p>
-
-          <p class="letter-emphasis">
-            That’s why I created UNDONE WELL.
-          </p>
-
-          <div class="letter-lines">
-            <span>A brand rooted in authenticity.</span>
-            <span>Thoughtful medicine.</span>
-            <span>Natural artistry.</span>
-            <span>And the belief that confidence should never ask you to become someone else.</span>
-          </div>
-
-          <div class="letter-lines letter-space">
-            <span>Built with intention.</span>
-            <span>In every recommendation.</span>
-            <span>Every treatment.</span>
-            <span>Every single conversation.</span>
-          </div>
-
-          <p>
-            Because this isn’t just about aesthetics.
-          </p>
-
-          <p>
-            It’s about creating an experience where you feel heard, understood, and cared for—from the moment you walk through our doors.
-          </p>
-
-          <p class="letter-emphasis letter-welcome">
-            Welcome to UNDONE WELL.
-          </p>
-
-          <div class="letter-lines">
-            <span>This isn’t just our name.</span>
-            <span>It’s our philosophy.</span>
-            <span>It’s our promise.</span>
-          </div>
-
-          <p class="letter-closing">
-            I’m so glad you’re here.
-          </p>
-
-          <p class="never-done">NEVER DONE.</p>
-        </div>
-
+        <a
+          class="philosophy-download"
+          href="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/PHILOSOPHY_MISSION_2.pdf?v=1786453384"
+          target="_blank"
+          rel="noopener"
+        >
+          Download Philosophy &amp; Mission <span>↗</span>
+        </a>
       </div>
     </section>
 
@@ -1143,44 +1154,33 @@
           <h2>Ashley <span>Reader</span></h2>
 
           <div class="founder-role">
-            Founder &amp; Medical Director · Injector · National Trainer &amp; Speaker · Visionary CEO
+            Founder &amp; Medical Director · Injector · Visionary CEO
           </div>
 
-          <div class="founder-bio">
+          <div class="founder-bio founder-message">
             <p>
-              Ashley Reader is the founder of UNDONE WELL, a nationally recognized
-              aesthetic nurse injector, educator, and speaker with more than a decade
-              of experience in nursing and aesthetic medicine. But her approach to
-              aesthetics has never been about simply performing treatments.
+              If you’ve followed my journey, you know I’ve always worked to create something that feels different—not just another aesthetic practice, but a place where confidence isn’t created by changing who you are, but by protecting and enhancing what makes you uniquely you.
             </p>
 
             <p>
-              Ashley believes the best aesthetic medicine starts with understanding
-              the whole person — their anatomy, their goals, what they notice, and
-              how they want to feel. Her philosophy is rooted in thoughtful medicine,
-              natural artistry, and long-term strategy, with an emphasis on results
-              that enhance rather than redefine.
+              That’s why I created <strong>UNDONE WELL</strong>, a brand rooted in authenticity, thoughtful medicine, natural artistry, and the belief that confidence should never ask you to become someone else. Everything we do is built with intention, from every recommendation and every treatment to every single conversation.
             </p>
 
             <p>
-              Known for her comprehensive approach to facial balancing, Ashley looks
-              beyond a single concern or treatment to create individualized plans that
-              evolve with her patients over time. Education and honest guidance are
-              central to every consultation — even when the best recommendation is
-              to do less, wait, or not treat at all.
+              Because this isn’t just about aesthetics. It’s about creating an experience where you feel heard, understood, and genuinely cared for from the moment you walk through our doors. It’s about thoughtful guidance, intentional treatment, and results that still feel unmistakably like you.
             </p>
 
             <p>
-              Her work extends beyond the treatment room. As a national trainer and
-              speaker, Ashley has spent years educating other medical professionals
-              in aesthetic medicine, with a focus on clinical judgment, anatomy,
-              artistry, and treating the face as a whole.
+              Welcome to <strong>UNDONE WELL</strong>. This isn’t just our name—it’s our philosophy, our promise, and the standard behind everything we do.
             </p>
+
+            <p>
+              I’m so glad you’re here.
+            </p>
+
+            <p class="never-done-inline"><strong>NEVER DONE.</strong></p>
           </div>
 
-          <div class="founder-quote">
-            “The best work shouldn't announce itself. It should simply feel like you.”
-          </div>
         </div>
 
       </div>
