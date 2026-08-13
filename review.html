@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#15100E">
+  <meta name="description" content="Read patient reviews and experiences with UNDONE WELL, a medical aesthetics and wellness studio in Bankers Hill, San Diego.">
+  <title>Patient Reviews | UNDONE WELL</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --header:#15100E;
+      --deep:#191311;
+      --deep-2:#1F1814;
+      --brown:#282019;
+      --charcoal:#2E2C28;
+      --charcoal-2:#34312D;
+      --cream:#F4EDE3;
+      --cream-soft:#DED4CB;
+      --muted:#B5AAA2;
+      --gold:#A38328;
+      --gold-bright:#D1A137;
+      --red:#C43A47;
+      --red-dark:#A92F3A;
+      --line:rgba(244,237,227,.15);
+      --line-gold:rgba(163,131,40,.4);
+      --max:1214px;
+      --serif:"DM Serif Display", Georgia, "Times New Roman", serif;
+      --sans:"Montserrat", Arial, Helvetica, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--deep);
+      color:var(--cream);
+      font-family:var(--sans);
+      font-size:14px;
+      line-height:1.75;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    body.menu-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%}
+    button{font:inherit}
+    .wrap{width:min(calc(100% - 64px),var(--max));margin-inline:auto}
+    .serif{font-family:var(--serif)}
+    .italic{font-style:italic;font-weight:400}
+
+    /* ANNOUNCEMENT */
+    .announcement{
+      height:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      text-align:center;
+      background:var(--charcoal);
+      color:#FFF;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.31em;
+      text-transform:uppercase;
+    }
+
+    /* HEADER */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:80;
+      height:86px;
+      background:var(--header);
+      border-bottom:1px solid rgba(163,131,40,.26);
+    }
+
+    .header-inner{
+      height:100%;
+      display:grid;
+      grid-template-columns:230px 1fr 235px;
+      gap:24px;
+      align-items:center;
+    }
+
+    .brand{
+      width:max-content;
+      display:inline-block;
+      font-size:13px;
+      font-weight:500;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#F7F4F1;
+      white-space:nowrap;
+    }
+
+    .brand .strike{
+      position:relative;
+      display:inline-block;
+    }
+
+    .brand .strike:after{
+      content:"";
+      position:absolute;
+      left:-1px;
+      right:-1px;
+      top:48%;
+      height:1px;
+      background:#F7F4F1;
+      opacity:.75;
+    }
+
+    .desktop-nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:36px;
+      height:100%;
+    }
+
+    .nav-item{position:relative;height:100%;display:flex;align-items:center}
+    .nav-link,.nav-trigger{
+      border:0;
+      background:transparent;
+      color:#B6AAA2;
+      padding:12px 0;
+      cursor:pointer;
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      transition:color .2s ease;
+      white-space:nowrap;
+    }
+
+    .nav-link:hover,.nav-trigger:hover,.nav-item:hover>.nav-trigger{color:#FFF}
+    .nav-trigger .caret{font-size:8px;margin-left:4px}
+
+    .dropdown{
+      position:absolute;
+      top:74px;
+      left:50%;
+      min-width:245px;
+      transform:translate(-50%,10px);
+      background:#1D1714;
+      border:1px solid rgba(163,131,40,.35);
+      padding:12px;
+      opacity:0;
+      visibility:hidden;
+      transition:.2s ease;
+      box-shadow:0 18px 45px rgba(0,0,0,.35);
+    }
+
+    .nav-item:hover .dropdown,
+    .nav-item:focus-within .dropdown{
+      opacity:1;
+      visibility:visible;
+      transform:translate(-50%,0);
+    }
+
+    .dropdown a{
+      display:block;
+      padding:10px 12px;
+      color:#CFC3BA;
+      font-size:10px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .dropdown a:hover,.dropdown a.active{
+      color:#FFF;
+      background:#282019;
+    }
+
+    .header-actions{
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      gap:27px;
+    }
+
+    .shop-link{
+      color:var(--red);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+
+    .book-btn{
+      min-width:136px;
+      height:48px;
+      padding:0 24px;
+      border-radius:999px;
+      background:var(--red);
+      color:#FFF;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      transition:background .2s ease, transform .2s ease;
+    }
+
+    .book-btn:hover{background:var(--red-dark);transform:translateY(-1px)}
+
+    .menu-btn{
+      display:none;
+      border:0;
+      background:none;
+      padding:10px;
+      cursor:pointer;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after{
+      width:23px;
+      height:1px;
+      display:block;
+      position:relative;
+      content:"";
+      background:#FFF;
+    }
+    .menu-btn span:before{position:absolute;top:-7px}
+    .menu-btn span:after{position:absolute;top:7px}
+
+    /* MOBILE NAV */
+    .mobile-nav{
+      position:fixed;
+      inset:0;
+      z-index:200;
+      background:#15100E;
+      padding:28px 26px 42px;
+      transform:translateX(100%);
+      transition:transform .35s ease;
+      overflow:auto;
+    }
+
+    .mobile-nav.open{transform:translateX(0)}
+    .mobile-nav-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:42px;
+    }
+
+    .close-btn{
+      width:42px;height:42px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:50%;
+      background:none;
+      color:#FFF;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    .mobile-links>a,.mobile-group-title{
+      display:block;
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,.09);
+      font-family:var(--serif);
+      font-size:26px;
+      color:#F5EFEA;
+    }
+
+    .mobile-sub a{
+      display:block;
+      padding:12px 0 12px 18px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      color:#BFB2A8;
+      font-size:10px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    .mobile-sub a.active{color:var(--gold-bright)}
+    .mobile-cta{margin-top:30px}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:535px;
+      display:flex;
+      align-items:center;
+      border-bottom:1px solid rgba(163,131,40,.4);
+      background:
+        radial-gradient(circle at 88% 44%, rgba(111,77,57,.62) 0, rgba(68,52,43,.55) 25%, rgba(46,44,40,.24) 53%, transparent 70%),
+        linear-gradient(90deg,#2E2C28 0%,#2E2C28 46%,#3C332C 70%,#4B392F 100%);
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(0,0,0,.02),rgba(0,0,0,.1));
+      pointer-events:none;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      padding:70px 0 76px;
+      max-width:740px;
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:0 0 28px;
+      color:var(--gold-bright);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow:before{
+      content:"";
+      width:34px;
+      height:1px;
+      background:var(--gold-bright);
+    }
+
+    .hero h1{
+      margin:0 0 22px;
+      font-family:var(--serif);
+      font-size:76px;
+      line-height:.98;
+      font-weight:400;
+      letter-spacing:-.025em;
+      color:#F8F5F1;
+    }
+
+    .hero h1 .italic{color:#D7A63C}
+    .hero-sub{
+      max-width:650px;
+      margin:0;
+      color:#D5D4D2;
+      font-size:16px;
+      line-height:1.85;
+    }
+
+    .crumb{
+      margin-top:33px;
+      color:#99918B;
+      font-size:9px;
+      font-weight:500;
+      letter-spacing:.23em;
+      text-transform:uppercase;
+    }
+
+    .crumb span{color:var(--gold-bright)}
+    .crumb i{font-style:normal;padding:0 10px;color:#736B65}
+
+    /* INTRO */
+    .intro{
+      background:var(--deep);
+      padding:100px 0 108px;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:95px;
+      align-items:start;
+    }
+
+    .mini-label{
+      margin:0 0 19px;
+      color:var(--gold-bright);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.25em;
+      text-transform:uppercase;
+    }
+
+    .section-title{
+      margin:0;
+      font-family:var(--serif);
+      font-size:58px;
+      line-height:1.02;
+      font-weight:400;
+      color:#F6F0E9;
+      letter-spacing:-.02em;
+    }
+
+    .section-title .italic{color:var(--red)}
+    .intro-copy .lead{
+      margin:0 0 22px;
+      font-family:var(--serif);
+      font-size:31px;
+      line-height:1.28;
+      color:#F0E6DD;
+    }
+
+    .intro-copy p:not(.lead){
+      margin:0;
+      color:#B5AAA2;
+      font-size:13px;
+      line-height:1.95;
+    }
+
+    .principles{
+      margin-top:72px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid var(--line-gold);
+    }
+
+    .principle{
+      padding:29px 34px 0 0;
+      margin-right:34px;
+      border-right:1px solid rgba(244,237,227,.11);
+    }
+
+    .principle:last-child{
+      margin-right:0;
+      padding-right:0;
+      border-right:0;
+    }
+
+    .principle .num{
+      margin-bottom:13px;
+      color:var(--gold-bright);
+      font-family:var(--serif);
+      font-style:italic;
+      font-size:19px;
+    }
+
+    .principle h3{
+      margin:0 0 10px;
+      color:#F3EBE4;
+      font-family:var(--serif);
+      font-size:22px;
+      font-weight:400;
+    }
+
+    .principle p{
+      margin:0;
+      color:#9F958E;
+      font-size:11px;
+      line-height:1.85;
+    }
+
+    /* FOUNDER NOTE */
+    .founder-note{
+      background:var(--deep);
+      padding:105px 0 112px;
+      border-bottom:1px solid rgba(163,131,40,.22);
+    }
+
+    .founder-note-grid{
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:95px;
+      align-items:start;
+    }
+
+    .founder-note-intro{
+      position:sticky;
+      top:140px;
+    }
+
+    .founder-note-small{
+      max-width:390px;
+      margin:26px 0 28px;
+      color:#AFA39B;
+      font-size:12px;
+      line-height:1.9;
+    }
+
+    .philosophy-download{
+      min-height:48px;
+      padding:0 23px;
+      border:1px solid rgba(209,161,55,.55);
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:11px;
+      color:#EADFD6;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      transition:border-color .2s ease,color .2s ease,transform .2s ease;
+    }
+
+    .philosophy-download:hover{
+      border-color:var(--gold-bright);
+      color:#FFF;
+      transform:translateY(-1px);
+    }
+
+    .founder-letter{
+      max-width:690px;
+      padding:48px 52px;
+      background:var(--brown);
+      border:1px solid rgba(163,131,40,.33);
+      box-shadow:0 24px 65px rgba(0,0,0,.13);
+    }
+
+    .founder-letter p{
+      margin:0 0 22px;
+      color:#C7BBB2;
+      font-size:13px;
+      line-height:1.95;
+    }
+
+    .founder-letter .letter-emphasis{
+      color:#F5ECE5;
+      font-family:var(--serif);
+      font-size:25px;
+      line-height:1.35;
+    }
+
+    .letter-lines{
+      display:grid;
+      gap:4px;
+      margin:2px 0 27px;
+      color:#E4D8CF;
+      font-family:var(--serif);
+      font-size:22px;
+      line-height:1.45;
+    }
+
+    .letter-space{
+      margin-top:30px;
+    }
+
+    .letter-welcome{
+      margin-top:32px !important;
+      color:var(--red) !important;
+      font-size:31px !important;
+      font-style:italic;
+    }
+
+    .letter-closing{
+      margin-top:26px !important;
+      margin-bottom:9px !important;
+      color:#E9DDD4 !important;
+    }
+
+    .never-done{
+      margin:0 !important;
+      color:var(--gold-bright) !important;
+      font-size:10px !important;
+      font-weight:700;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
+    /* WHO WE ARE / PHILOSOPHY INTRO */
+    .who-intro{
+      background:var(--deep);
+      padding:72px 0 78px;
+      border-bottom:1px solid rgba(163,131,40,.22);
+    }
+
+    .who-intro-inner{
+      display:grid;
+      grid-template-columns:.72fr 1.28fr;
+      gap:72px;
+      align-items:start;
+    }
+
+    .who-intro .mini-label{
+      margin:5px 0 0;
+    }
+
+    .who-intro-copy{
+      max-width:790px;
+      margin-left:auto;
+    }
+
+    .who-intro-copy p{
+      margin:0;
+      font-family:var(--serif);
+      font-size:clamp(25px,2.3vw,36px);
+      line-height:1.42;
+      font-weight:400;
+      color:#F3EAE3;
+    }
+
+    .who-intro-copy .accent{
+      color:var(--gold-bright);
+      font-style:italic;
+    }
+
+    .founder-message{
+      max-width:690px;
+    }
+
+    .founder-message p{
+      margin:0 0 20px;
+    }
+
+    .founder-message strong{
+      color:#F4E9E1;
+      font-weight:600;
+    }
+
+    .never-done-inline{
+      margin:31px 0 0 !important;
+      color:var(--gold-bright) !important;
+      font-size:10px !important;
+      font-weight:700;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
+    /* FOUNDER */
+    .founder{
+      background:var(--charcoal);
+      padding:105px 0;
+    }
+
+    .founder-grid{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:78px;
+      align-items:center;
+    }
+
+    .founder-photo-wrap{
+      position:relative;
+      padding:0 0 30px 30px;
+    }
+
+    .founder-photo-wrap:before{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:68%;
+      height:72%;
+      border:1px solid rgba(209,161,55,.48);
+    }
+
+    .founder-photo{
+      position:relative;
+      z-index:1;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:center 30%;
+      filter:saturate(.88) contrast(1.03);
+    }
+
+    .founder h2{
+      margin:0 0 8px;
+      font-family:var(--serif);
+      font-size:62px;
+      line-height:1;
+      font-weight:400;
+      color:#F7F0E9;
+    }
+
+    .founder h2 span{color:var(--red);font-style:italic}
+
+    .founder-role{
+      margin:17px 0 28px;
+      color:var(--gold-bright);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.18em;
+      line-height:1.8;
+      text-transform:uppercase;
+    }
+
+    .founder-bio{
+      color:#C1B6AE;
+      font-size:12px;
+      line-height:1.95;
+    }
+
+    .founder-bio p{margin:0 0 17px}
+
+    .founder-quote{
+      margin-top:27px;
+      padding-top:23px;
+      border-top:1px solid rgba(244,237,227,.13);
+      color:#F2E8DF;
+      font-family:var(--serif);
+      font-size:22px;
+      font-style:italic;
+      line-height:1.4;
+    }
+
+    /* TEAM */
+    .team{
+      background:var(--deep);
+      padding:108px 0 115px;
+    }
+
+    .team-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+      gap:70px;
+      margin-bottom:58px;
+    }
+
+    .team-intro{
+      max-width:560px;
+      margin:0 0 6px;
+      color:#AFA39B;
+      font-size:12px;
+      line-height:1.85;
+    }
+
+    .team-intro p{
+      margin:0 0 16px;
+    }
+
+    .team-intro p:last-child{
+      margin-bottom:0;
+    }
+
+    .team-intro .team-closing{
+      color:#E9DED5;
+      font-weight:600;
+    }
+
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:45px 24px;
+    }
+
+    .team-card{
+      background:var(--brown);
+      border:1px solid rgba(163,131,40,.28);
+      overflow:hidden;
+    }
+
+    .team-photo{
+      aspect-ratio:4/5;
+      overflow:hidden;
+      background:#342A23;
+    }
+
+    .team-photo img{
+      height:100%;
+      object-fit:cover;
+      filter:saturate(.9) contrast(1.02);
+      transition:transform .65s ease;
+    }
+
+    .team-card:hover .team-photo img{transform:scale(1.025)}
+
+    .team-info{padding:22px 22px 25px}
+    .team-info h3{
+      margin:0 0 4px;
+      font-family:var(--serif);
+      font-size:27px;
+      line-height:1.15;
+      font-weight:400;
+      color:#F6EEE7;
+    }
+
+    .team-role{
+      margin:0 0 11px;
+      color:var(--gold-bright);
+      font-size:8px;
+      font-weight:600;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      line-height:1.7;
+    }
+
+    .team-detail{
+      margin:0;
+      color:#A69B93;
+      font-size:10px;
+      line-height:1.8;
+    }
+
+    /* CTA */
+    .cta{
+      background:
+        radial-gradient(circle at 80% 35%, rgba(96,59,44,.38), transparent 40%),
+        #120D0B;
+      border-top:1px solid rgba(163,131,40,.25);
+      padding:95px 0;
+    }
+
+    .cta-inner{
+      max-width:825px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .cta .mini-label{margin-bottom:20px}
+    .cta h2{
+      margin:0 0 20px;
+      font-family:var(--serif);
+      font-size:55px;
+      line-height:1.07;
+      font-weight:400;
+      color:#F7EFE8;
+    }
+
+    .cta h2 span{color:var(--red);font-style:italic}
+    .cta p{
+      max-width:650px;
+      margin:0 auto 30px;
+      color:#AFA39C;
+      font-size:12px;
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .outline-btn{
+      min-height:48px;
+      padding:0 25px;
+      border:1px solid rgba(209,161,55,.55);
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#E6D8CD;
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      transition:.2s ease;
+    }
+
+    .outline-btn:hover{border-color:var(--gold-bright);color:#FFF}
+
+    /* FOOTER */
+    footer{
+      background:var(--charcoal);
+      padding:85px 0 34px;
+      color:#C5BAB2;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.25fr .9fr .9fr .8fr;
+      gap:78px;
+      padding-bottom:60px;
+    }
+
+    .footer-logo{
+      margin-bottom:18px;
+      display:inline-block;
+      color:#0F0C0B;
+      font-size:13px;
+      font-weight:500;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+
+    .footer-logo .strike{
+      position:relative;
+      display:inline-block;
+    }
+
+    .footer-logo .strike:after{
+      content:"";
+      position:absolute;
+      left:-1px;right:-1px;top:48%;
+      height:1px;background:#0F0C0B;
+    }
+
+    .footer-about{
+      max-width:290px;
+      margin:0;
+      color:#D0C6BE;
+      font-size:12px;
+      line-height:1.95;
+    }
+
+    .footer-heading{
+      margin:0 0 20px;
+      color:var(--gold-bright);
+      font-size:9px;
+      font-weight:600;
+      letter-spacing:.23em;
+      text-transform:uppercase;
+    }
+
+    footer ul{list-style:none;padding:0;margin:0}
+    footer li{margin-bottom:13px}
+    footer a,footer address{
+      color:#D4CAC2;
+      font-size:12px;
+      font-style:normal;
+      line-height:1.8;
+      transition:color .2s ease;
+    }
+
+    footer a:hover{color:#FFF}
+
+    .footer-bottom{
+      min-height:57px;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:25px;
+      padding-top:28px;
+      color:#8E857F;
+      font-size:8px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    .footer-bottom a{font-size:8px;color:#8E857F}
+    .footer-bottom a:hover{color:#D2C6BC}
+
+    /* REVEAL */
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .75s ease,transform .75s ease;
+    }
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:1100px){
+      .header-inner{grid-template-columns:190px 1fr 200px}
+      .desktop-nav{gap:23px}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{gap:45px}
+    }
+
+    @media(max-width:900px){
+      .wrap{width:min(calc(100% - 38px),var(--max))}
+      .announcement{font-size:7.5px;letter-spacing:.22em}
+      .site-header{height:73px}
+      .header-inner{display:flex;justify-content:space-between}
+      .desktop-nav,.header-actions{display:none}
+      .menu-btn{display:block}
+      .hero{min-height:470px}
+      .who-intro-inner{grid-template-columns:1fr;gap:28px}
+      .who-intro-copy{margin-left:0;max-width:760px}
+      .hero h1{font-size:66px}
+      .intro-grid,.founder-grid,.founder-note-grid{grid-template-columns:1fr;gap:48px}
+      .founder-note-intro{position:static}
+      .principles{grid-template-columns:1fr}
+      .principle{
+        margin:0;
+        padding:24px 0;
+        border-right:0;
+        border-bottom:1px solid rgba(244,237,227,.11);
+      }
+      .principle:last-child{border-bottom:0}
+      .founder-photo-wrap{max-width:650px}
+      .team-head{display:block}
+      .team-intro{margin-top:22px}
+      .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+      .footer-brand{grid-column:1/-1}
+    }
+
+    @media(max-width:580px){
+      .wrap{width:min(calc(100% - 32px),var(--max))}
+      .announcement{height:auto;min-height:32px;padding:8px 14px;line-height:1.5}
+      .brand{font-size:12px}
+      .hero{min-height:420px}
+      .who-intro{padding:52px 0 58px}
+      .who-intro-copy p{font-size:25px;line-height:1.48}
+      .hero-content{padding:64px 0}
+      .hero h1{font-size:57px}
+      .hero-sub{font-size:14px}
+      .intro,.founder,.team,.founder-note{padding:78px 0}
+      .founder-letter{padding:34px 26px}
+      .letter-lines{font-size:20px}
+      .section-title{font-size:47px}
+      .intro-copy .lead{font-size:27px}
+      .founder h2{font-size:50px}
+      .founder-photo-wrap{padding:0 0 20px 20px}
+      .team-grid{grid-template-columns:1fr}
+      .cta{padding:75px 0}
+      .cta h2{font-size:45px}
+      footer{padding-top:68px}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:38px 25px}
+      .footer-brand{grid-column:1/-1}
+      .footer-bottom{display:block;line-height:2.3}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      .team-photo img,.book-btn{transition:none}
+    }
+  
+/* ===== REVIEWS PAGE ===== */
+.reviews-hero{position:relative;overflow:hidden;min-height:610px;display:flex;align-items:center;border-bottom:1px solid rgba(163,131,40,.35);background:linear-gradient(118deg,#211915 0%,#2E2C28 52%,#4B392F 100%)}
+.reviews-hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 44%,rgba(209,161,55,.13),transparent 30%),linear-gradient(90deg,rgba(0,0,0,.18),transparent 55%);pointer-events:none}
+.hero-orbit{position:absolute;border:1px solid rgba(209,161,55,.22);border-radius:50%;pointer-events:none}.hero-orbit-a{width:540px;height:540px;right:-80px;top:-145px}.hero-orbit-b{width:330px;height:330px;right:155px;bottom:-205px}
+.reviews-hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .7fr;gap:90px;align-items:center;padding:92px 0}
+.reviews-hero-copy{max-width:760px}.reviews-hero h1{margin:0 0 28px;font-family:var(--serif);font-size:82px;line-height:.96;font-weight:400;letter-spacing:-.035em;color:#F8F5F1}.reviews-hero h1 .italic{color:var(--gold-bright)}
+.reviews-hero-sub{max-width:675px;margin:0;color:#CEC2B9;font-size:15px;line-height:1.9}.rating-panel{justify-self:end;width:290px;padding:34px 32px 31px;border:1px solid rgba(209,161,55,.4);background:rgba(25,19,17,.54);backdrop-filter:blur(8px)}
+.rating-number{display:block;font-family:var(--serif);font-size:76px;line-height:.9;color:#F7F0E8}.rating-stars{margin:16px 0 9px;color:var(--gold-bright);font-size:19px;letter-spacing:.14em}.rating-panel p{margin:0;color:#D3C8BF;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.rating-line{height:1px;background:rgba(244,237,227,.13);margin:25px 0 20px}.rating-note{color:#9F948C;font-size:10px;line-height:1.75;text-transform:uppercase;letter-spacing:.11em}
+.review-intro{padding:110px 0;background:var(--deep)}.review-intro-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:95px;align-items:start}.review-intro-copy{max-width:690px}.review-intro-copy .lead{margin:0 0 26px;font-family:var(--serif);font-size:34px;line-height:1.3;color:#F0E6DD}.review-intro-copy p:last-child{margin:0;color:#AFA39B;font-size:13px;line-height:1.95}
+.quote-band{padding:72px 0;background:var(--brown);border-top:1px solid rgba(163,131,40,.22);border-bottom:1px solid rgba(163,131,40,.22)}.quote-band-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}.quote-band blockquote{margin:0;padding:12px 38px 12px 0;font-family:var(--serif);font-size:26px;line-height:1.38;color:#F1E7DE;border-right:1px solid rgba(244,237,227,.1)}.quote-band blockquote+blockquote{padding-left:38px}.quote-band blockquote:last-child{border-right:0}.quote-band cite{display:block;margin-top:20px;font-family:var(--sans);font-style:normal;font-size:8px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright)}
+.reviews-wall{padding:116px 0 125px;background:#171210}.reviews-heading{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:58px}.reviews-heading>p{justify-self:end;max-width:420px;margin:0 0 8px;color:#9D9189;font-size:12px;line-height:1.9}.reviews-grid{columns:3 330px;column-gap:22px}.review-card{break-inside:avoid;margin:0 0 22px;padding:30px 29px 26px;background:#211A17;border:1px solid rgba(244,237,227,.11);box-shadow:0 16px 40px rgba(0,0,0,.12);transition:transform .25s ease,border-color .25s ease}.review-card:hover{transform:translateY(-3px);border-color:rgba(209,161,55,.45)}.review-card--feature{background:linear-gradient(145deg,#282019,#211A17);border-color:rgba(163,131,40,.33)}
+@media(min-width:901px){.reviews-grid{position:relative;columns:auto;column-gap:0}.reviews-grid .review-card{position:absolute;margin:0;width:calc((100% - 44px)/3);will-change:left,top}.reviews-grid .review-card:hover{z-index:2}.reviews-heading{margin-bottom:64px}}
+.review-top{display:grid;grid-template-columns:46px 1fr auto;gap:13px;align-items:center;padding-bottom:21px;border-bottom:1px solid rgba(244,237,227,.09)}.avatar{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#332923;border:1px solid rgba(209,161,55,.28);color:#E2B656;font-family:var(--serif);font-size:17px}.review-person h3{margin:0 0 3px;color:#F4ECE5;font-family:var(--serif);font-size:20px;font-weight:400}.review-person span{color:#8F857E;font-size:9px;letter-spacing:.09em;text-transform:uppercase}.stars{color:var(--gold-bright);font-size:11px;letter-spacing:.08em;white-space:nowrap}.review-copy{padding:24px 0 19px}.review-copy p{margin:0 0 17px;color:#C3B8AF;font-size:12.5px;line-height:1.9}.review-copy p:last-child{margin-bottom:0}.review-foot{display:flex;justify-content:space-between;gap:15px;padding-top:17px;border-top:1px solid rgba(244,237,227,.08);color:#827870;font-size:7.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase}.review-foot span:last-child{color:#AA956A;text-align:right}
+.trust-strip{padding:35px 0;background:#2E2C28;border-top:1px solid rgba(163,131,40,.3);border-bottom:1px solid rgba(163,131,40,.3)}.trust-strip-inner{display:flex;align-items:center;justify-content:center;gap:21px;flex-wrap:wrap;color:#D6CBC2;font-family:var(--serif);font-size:17px}.trust-strip i{width:4px;height:4px;border-radius:50%;background:var(--gold-bright)}
+.reviews-cta{padding:105px 0;background:linear-gradient(135deg,#211916,#30231D)}.reviews-cta-inner{max-width:840px;margin:auto;text-align:center}.reviews-cta .mini-label{color:var(--gold-bright)}.reviews-cta h2{margin:0 auto 22px;font-family:var(--serif);font-size:60px;line-height:1.05;font-weight:400;color:#F5EEE8}.reviews-cta h2 span{color:var(--red);font-style:italic}.reviews-cta p:not(.mini-label){max-width:690px;margin:0 auto 30px;color:#B6AAA2;font-size:13px;line-height:1.9}.reviews-cta .cta-buttons{justify-content:center}
+@media(max-width:900px){.reviews-hero-inner{grid-template-columns:1fr;gap:40px}.rating-panel{justify-self:start}.reviews-hero h1{font-size:68px}.review-intro-grid,.reviews-heading{grid-template-columns:1fr;gap:35px}.reviews-heading>p{justify-self:start}.quote-band-grid{grid-template-columns:1fr}.quote-band blockquote,.quote-band blockquote+blockquote{padding:28px 0;border-right:0;border-bottom:1px solid rgba(244,237,227,.1)}.quote-band blockquote:last-child{border-bottom:0}.reviews-grid{columns:2 280px}}
+@media(max-width:580px){.reviews-hero{min-height:560px}.reviews-hero-inner{padding:68px 0}.reviews-hero h1{font-size:55px}.reviews-hero-sub{font-size:13px}.rating-panel{width:100%}.review-intro{padding:78px 0}.review-intro-copy .lead{font-size:29px}.quote-band{padding:48px 0}.quote-band blockquote{font-size:23px}.reviews-wall{padding:82px 0}.reviews-grid{columns:1}.review-card{padding:26px 22px 23px}.review-top{grid-template-columns:42px 1fr}.avatar{width:42px;height:42px}.stars{grid-column:2;justify-self:start}.review-foot{display:block;line-height:2}.review-foot span{display:block}.review-foot span:last-child{text-align:left}.trust-strip-inner{gap:12px;font-size:15px}.reviews-cta{padding:78px 0}.reviews-cta h2{font-size:45px}}
+
+</style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    MEDICAL-GRADE SKINCARE · PERSONALIZED AESTHETICS · UNDONE WELL
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+
+      <a href="https://www.undonewell.com/" class="brand" aria-label="UNDONE WELL home">
+        <span class="strike">UN</span>DONE WELL.
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">Services <span class="caret">▾</span></button>
+          <div class="dropdown">
+            <a href="https://www.undonewell.com/#/injectables">Cosmetic Injectables</a>
+            <a href="https://www.undonewell.com/#/facials">Medical Facials</a>
+            <a href="https://www.undonewell.com/#/skin">Skin Treatments</a>
+          </div>
+        </div>
+
+        <a href="https://www.undonewell.com/#/gallery" class="nav-link">Gallery</a>
+
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">Before and After <span class="caret">▾</span></button>
+          <div class="dropdown">
+            <a href="https://www.undonewell.com/#/gallery">View Gallery</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">Offers <span class="caret">▾</span></button>
+          <div class="dropdown">
+            <a href="https://www.undonewell.com/#/packages">Packages</a>
+            <a href="https://www.undonewell.com/#/alle">Allē Rewards</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <button class="nav-trigger" type="button">About <span class="caret">▾</span></button>
+          <div class="dropdown">
+            <a href="/who-we-are.html">Who We Are</a>
+            <a href="/reviews.html" class="active">Reviews</a>
+            <a href="https://www.undonewell.com/#/contact">Contact</a>
+            <a href="https://www.undonewell.com/#/team">Join Our Team</a>
+            <a href="https://www.undonewell.com/#/collab">Collaboration Inquiry</a>
+            <a href="https://www.undonewell.com/#/train">Train with Ashley</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <div class="header-actions">
+        <a class="shop-link" href="https://shop.undonewell.com/" target="_blank" rel="noopener">Shop ↗</a>
+        <a class="book-btn" href="https://www.undonewell.com/#/contact">Book Now</a>
+      </div>
+
+      <button class="menu-btn" type="button" aria-label="Open menu" onclick="openMobileMenu()">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-top">
+      <a href="https://www.undonewell.com/" class="brand"><span class="strike">UN</span>DONE WELL.</a>
+      <button class="close-btn" type="button" aria-label="Close menu" onclick="closeMobileMenu()">×</button>
+    </div>
+
+    <div class="mobile-links">
+      <a href="https://www.undonewell.com/#/injectables">Services</a>
+      <a href="https://www.undonewell.com/#/gallery">Gallery</a>
+      <a href="https://www.undonewell.com/#/gallery">Before and After</a>
+      <a href="https://www.undonewell.com/#/packages">Offers</a>
+      <div class="mobile-group-title">About</div>
+      <div class="mobile-sub">
+        <a href="/who-we-are.html">Who We Are</a>
+        <a class="active" href="/reviews.html">Reviews</a>
+        <a href="https://www.undonewell.com/#/contact">Contact</a>
+        <a href="https://www.undonewell.com/#/team">Join Our Team</a>
+        <a href="https://www.undonewell.com/#/collab">Collaboration Inquiry</a>
+        <a href="https://www.undonewell.com/#/train">Train with Ashley</a>
+      </div>
+    </div>
+
+    <div class="mobile-cta">
+      <a class="book-btn" style="width:100%" href="https://www.undonewell.com/#/contact">Book Now</a>
+    </div>
+  </aside>
+
+
+  <main>
+  <section class="reviews-hero">
+    <div class="hero-orbit hero-orbit-a"></div><div class="hero-orbit hero-orbit-b"></div>
+    <div class="wrap reviews-hero-inner">
+      <div class="reviews-hero-copy reveal">
+        <p class="eyebrow">Patient Stories</p>
+        <h1>Kind words.<br><span class="italic">Real confidence.</span></h1>
+        <p class="reviews-hero-sub">The best measure of our work is how our patients feel when they leave — heard, cared for, still unmistakably themselves.</p>
+        <p class="crumb"><a href="https://www.undonewell.com/">Home</a><i>·</i><span>Reviews</span></p>
+      </div>
+      <aside class="rating-panel reveal" aria-label="Review summary">
+        <span class="rating-number">5.0</span>
+        <div class="rating-stars">★★★★★</div>
+        <p>Featured patient reviews</p>
+        <div class="rating-line"></div>
+        <div class="rating-note">Natural artistry · thoughtful medicine · honest guidance</div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="review-intro">
+    <div class="wrap review-intro-grid reveal">
+      <div>
+        <p class="mini-label">In Their Words</p>
+        <h2 class="section-title">The experience<br><span class="italic">matters.</span></h2>
+      </div>
+      <div class="review-intro-copy">
+        <p class="lead">“I just don’t trust anyone else with my face.”</p>
+        <p>Across years of appointments, first-time treatments, wedding prep, men’s aesthetics, injectables and skin treatments, one theme keeps showing up: patients want to look like themselves — refreshed, never overdone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap quote-band-grid">
+      <blockquote class="reveal">“Her work is subtle, balanced, and never obvious.”<cite>— Victoria C.</cite></blockquote>
+      <blockquote class="reveal">“Precise, intentional, and customized — not cookie-cutter at all.”<cite>— Michael S.</cite></blockquote>
+      <blockquote class="reveal">“She always enhances without overdoing anything.”<cite>— Lucy E.</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="reviews-wall">
+    <div class="wrap">
+      <div class="reviews-heading reveal">
+        <div><p class="mini-label">Patient Reviews</p><h2 class="section-title">Stories of trust,<br><span class="italic">care &amp; confidence.</span></h2></div>
+        <p>Every review below is drawn from the patient feedback shared with UNDONE WELL.</p>
+      </div>
+      <div class="reviews-grid"><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div class="review-person"><h3>Shelly S.</h3><span>4 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>I’ve been seeing Ashley since 2023, and I’ve had Botox, filler, and microneedling treatments with her. Every experience has been incredibly positive. She truly listens to what you want while offering thoughtful, professional guidance on how to achieve the best results. I especially appreciate her focus on maintaining a natural look. Ashley, Sandy, and Lauren make an amazing team—I always enjoy my visits and our chats.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Long-time patient</span></div>
+    </article><article class="review-card review-card--feature reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">VC</div>
+        <div class="review-person"><h3>Victoria C.</h3><span>4 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Ashley is incredible. She is extremely knowledgeable and has such a great bedside manner, which immediately makes you feel comfortable and at ease. One thing I really appreciate about her is that she never pushes services you do not need. She takes the time to listen and is very thoughtful about what will actually help you achieve the result you want.</p><p>Most importantly, she does beautiful work. I want to look natural. I do not want to look like I have had Botox. I just want to look refreshed and like the best version of myself, and Ashley does an amazing job achieving exactly that. Her work is subtle, balanced, and never obvious.</p><p>To me, that is the mark of a true artist in this field, and Ashley absolutely has that talent. I would trust her completely and highly recommend her to anyone looking for natural, high quality results.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Natural results</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">DL</div>
+        <div class="review-person"><h3>David L.</h3><span>2 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Nurse Ashley is the best. Her team Sandy and Lauren are amazing also. Been using her Sevices for years.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Years of trust</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">AL</div>
+        <div class="review-person"><h3>Abra L.</h3><span>2 weeks ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Decided I was ready for Botox, but was super nervous about looking botched (iykyk). Did some research online and came across RAVE reviews for Ashley. Her before/after photos speak for themselves—her patients look like themselves, but refreshed, rejuvenated, and natural! I’ve seen Ashley and her team twice (once for the initial appt and once for a follow-up) and everyone is so friendly and welcoming. I’m glad I took the leap and booked with Ashley :)</p></div>
+      <div class="review-foot"><span>Google Review</span><span>First Botox experience</span></div>
+    </article><article class="review-card review-card--feature reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">MD</div>
+        <div class="review-person"><h3>Mark D.</h3><span>a month ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Where do I even begin??</p><p>I’ve been coming to Ashley for about 3 years now. I keep coming back, not only for her charming, professional, and charismatic self, but because her knowledge and skill for treatments is just truly unmatched. I’ve gone to many different aesthetic clinics, and genuinely none compare to Ashley.</p><p>I’ve had a variety of treatments done here over the years—Botox, Radiesse, jawline filler, a little lip filler here and there, and some cheek filler to address volume loss. What I love is that Ashley always keeps everything looking natural and true to me—just a more refreshed, youthful, and well-rested version of myself.</p><p>I also really appreciate how transparent Ashley and her team are. They’re honest about which treatments they think will be beneficial and which ones they don’t feel are necessary, which makes the entire experience feel thoughtful, trustworthy, and personalized.</p><p>I moved to NYC a year ago, but I come back every 3–6 months to get my treatments done by Ashley, because I just don’t trust anyone else with my face. From looking tired and dead, to alive and glowing ✨</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Patient for 3 years</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">LE</div>
+        <div class="review-person"><h3>Lucy E.</h3><span>a month ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Ashley’s expertise is simply unmatched. Over the years, I’ve come to completely rely on her professional eye and recommendations. She knows exactly what’s needed to achieve natural, beautiful results every time, and I trust her judgment implicitly. She’s precise, thoughtful, and always enhances without overdoing anything.</p><p>On top of that, her team is absolutely wonderful—caring, warm, and genuinely fun to be around. They always put me at ease, and I look forward to each visit—not just for the results, but for the lovely experience they create.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Expert guidance</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">AH</div>
+        <div class="review-person"><h3>Andrea H.</h3><span>3 years ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>I’ve been seeing Ashley since 2020 and she always does a PHENOMENAL job! She takes her time to discuss your goals and what your options are, all while making you feel welcome, comfortable, and like a friend. She is careful to not overdo it and goes for the most natural look. I recommend her to legit all of my friends (and everyone else). She is the best!!</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Patient since 2020</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">AM</div>
+        <div class="review-person"><h3>Adam M.</h3><span>6 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>Ashley is the best I’ve ever worked with. I’ve been to multiple other places in Orange County and I’ll never go anywhere else.</p><p>As a male patient, she’s made it so comfortable and takes care of me. I’ve done multiple different treatments now from filler, Botox, and microneedling.</p><p>Such an amazing team, Sandy and Lauren are awesome and help so much with pre and post care.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Male patient</span></div>
+    </article><article class="review-card reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">AM</div>
+        <div class="review-person"><h3>Alexis M.</h3><span>5 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>I seriously don’t even know where to begin to find the words to describe how magical Ashley and her team are. I have been seeing them for various services over the last year or so, and it is from start to finish, the best experience I have ever received ANYWHERE :) I feel so comfortable, taken care of, heard, appreciated, and cared for the minute I walk through the door for each appt. It genuinely feels like I’m hanging with my girlfriends while getting treatments and I look forward to every single appointment! My wedding is this September and they helped put together a plan for me in advance, so I look and feel my best for my special day! I have never felt better about myself and have recommended Ashley to everyone I know! If I could give them 100 stars I would! Thank you Ashley and you girls for literally changing my life! :)</p></div>
+      <div class="review-foot"><span>Google Review</span><span>Wedding prep</span></div>
+    </article><article class="review-card review-card--feature reveal">
+      <div class="review-top">
+        <div class="avatar" aria-hidden="true">MS</div>
+        <div class="review-person"><h3>Michael S.</h3><span>4 months ago</span></div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+      </div>
+      <div class="review-copy"><p>I’ll be honest—I was a little hesitant walking into my first aesthetic appointment, especially as a guy. But from the moment I met Ashley, that completely changed.</p><p>I came in for PRF to help improve my hairline and ended up doing Botox as well, and I couldn’t be happier with the entire experience. Ashley is incredibly welcoming, down-to-earth, and just genuinely easy to talk to. She took the time to really educate me on what we were doing, why it works, and what kind of results I could realistically expect—which I appreciated more than anything.</p><p>You can immediately tell she’s extremely experienced. Everything felt precise, intentional, and customized—not cookie-cutter at all. She has a very natural approach, which was important to me, and I still look like myself… just more refreshed and confident.</p><p>What stood out the most is that you can tell she truly cares. This isn&#x27;t just a business to her—she’s in it for the right reasons and wants her patients to feel their absolute best. There was zero pressure, just honest recommendations and a clear plan moving forward.</p><p>If you’re a guy on the fence about trying something like this—don’t be. You’re in the best hands with Ashley. I’ll definitely be back.</p></div>
+      <div class="review-foot"><span>Google Review</span><span>PRF + Botox</span></div>
+    </article></div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="wrap trust-strip-inner reveal">
+      <span>Listen first.</span><i></i><span>Recommend thoughtfully.</span><i></i><span>Enhance naturally.</span><i></i><span>Never overdo it.</span>
+    </div>
+  </section>
+
+  <section class="reviews-cta">
+    <div class="wrap">
+      <div class="reviews-cta-inner reveal">
+        <p class="mini-label">Your Experience Starts Here</p>
+        <h2>Ready to feel like the best version of <span>you?</span></h2>
+        <p>Tell us what you’re considering and what you want to accomplish. We’ll build a thoughtful plan around you — never a one-size-fits-all treatment.</p>
+        <div class="cta-buttons"><a class="book-btn" href="https://www.undonewell.com/#/contact">Book Now</a><a class="outline-btn" href="tel:+16193306393">Call the Studio</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a class="footer-logo" href="https://www.undonewell.com/">
+            <span class="strike">UN</span>DONE WELL.
+          </a>
+
+          <p class="footer-about">
+            San Diego aesthetics &amp; wellness. Rooted in authenticity.
+            Thoughtful medicine. Built around you. Redefining the patient
+            experience. Top 1% Allergan.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-heading">Explore</p>
+          <ul>
+            <li><a href="https://www.undonewell.com/#/injectables">Cosmetic Injectables</a></li>
+            <li><a href="https://www.undonewell.com/#/facials">Medical Facials</a></li>
+            <li><a href="https://www.undonewell.com/#/skin">Skin Treatments</a></li>
+            <li><a href="https://www.undonewell.com/#/gallery">Gallery</a></li>
+            <li><a href="https://www.undonewell.com/#/packages">Packages</a></li>
+            <li><a href="https://shop.undonewell.com/" target="_blank" rel="noopener">Shop Skincare ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-heading">Visit</p>
+          <ul>
+            <li><a href="https://www.undonewell.com/#/contact">Bankers Hill, San Diego</a></li>
+            <li><a href="tel:+16193306393">Call the Studio</a></li>
+            <li><a href="mailto:hello@undonewell.com">hello@undonewell.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-heading">Follow</p>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Allē Rewards</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 UNDONE WELL</span>
+        <span>
+          <a href="#">Privacy</a> ·
+          <a href="#">Terms</a> ·
+          <a href="#">Accessibility</a>
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    const mobileNav = document.getElementById('mobileNav');
+
+    function openMobileMenu(){
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden','false');
+      document.body.classList.add('menu-open');
+    }
+
+    function closeMobileMenu(){
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden','true');
+      document.body.classList.remove('menu-open');
+    }
+
+    document.addEventListener('keydown',function(e){
+      if(e.key === 'Escape') closeMobileMenu();
+    });
+
+    const revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:.08});
+
+    document.querySelectorAll('.reveal').forEach(function(el){
+      revealObserver.observe(el);
+    });
+
+
+    // Desktop review wall: keep the three featured testimonials across the top,
+    // then place the remaining cards into the shortest column based on their
+    // real rendered height. This keeps the desktop wall visually balanced while
+    // leaving the existing tablet/mobile flow untouched.
+    const reviewsGrid = document.querySelector('.reviews-grid');
+    let reviewLayoutTimer;
+
+    function clearDesktopReviewLayout(){
+      if(!reviewsGrid) return;
+      reviewsGrid.style.height = '';
+      reviewsGrid.querySelectorAll('.review-card').forEach(function(card){
+        card.style.width = '';
+        card.style.left = '';
+        card.style.top = '';
+      });
+    }
+
+    function layoutDesktopReviews(){
+      if(!reviewsGrid) return;
+
+      if(window.innerWidth <= 900){
+        clearDesktopReviewLayout();
+        return;
+      }
+
+      const cards = Array.from(reviewsGrid.querySelectorAll('.review-card'));
+      if(!cards.length) return;
+
+      const gap = 22;
+      const cols = 3;
+      const colWidth = (reviewsGrid.clientWidth - gap * (cols - 1)) / cols;
+      const heights = [0,0,0];
+
+      // Set the final desktop width before measuring heights.
+      cards.forEach(function(card){
+        card.style.width = colWidth + 'px';
+        card.style.left = '0px';
+        card.style.top = '0px';
+      });
+
+      // Feature cards form the first row. Their DOM order is Victoria, Mark, Michael.
+      const featured = cards.filter(function(card){
+        return card.classList.contains('review-card--feature');
+      });
+      const remaining = cards.filter(function(card){
+        return !card.classList.contains('review-card--feature');
+      });
+
+      featured.slice(0,3).forEach(function(card, col){
+        card.style.left = (col * (colWidth + gap)) + 'px';
+        card.style.top = '0px';
+        heights[col] = card.offsetHeight + gap;
+      });
+
+      // Largest remaining cards are placed first, always into the current
+      // shortest column. That keeps the bottoms of all three columns close.
+      remaining.sort(function(a,b){ return b.offsetHeight - a.offsetHeight; });
+      remaining.forEach(function(card){
+        let col = 0;
+        for(let i=1;i<cols;i++) if(heights[i] < heights[col]) col = i;
+        card.style.left = (col * (colWidth + gap)) + 'px';
+        card.style.top = heights[col] + 'px';
+        heights[col] += card.offsetHeight + gap;
+      });
+
+      reviewsGrid.style.height = Math.max.apply(null, heights) - gap + 'px';
+    }
+
+    function queueReviewLayout(){
+      clearTimeout(reviewLayoutTimer);
+      reviewLayoutTimer = setTimeout(layoutDesktopReviews, 80);
+    }
+
+    window.addEventListener('load', layoutDesktopReviews);
+    window.addEventListener('resize', queueReviewLayout);
+    if(document.fonts && document.fonts.ready){
+      document.fonts.ready.then(layoutDesktopReviews);
+    }else{
+      layoutDesktopReviews();
+    }
+  </script>
+
+</body>
+</html>
