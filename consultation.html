@@ -316,21 +316,24 @@ header{
 /* ZENOTI FRAME */
 
 .frame-pad{
-  padding:8px;
-}
+  padding:22px;
+  border-radius:0 0 16px 16px;
 
-.frame{
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:12px;
-  overflow:hidden;
-
-  /* Background image behind the transparent Zenoti form */
+  /* Image only around the form */
   background-image:
-    linear-gradient(rgba(23,10,8,.18), rgba(23,10,8,.18)),
+    linear-gradient(rgba(23,10,8,.12), rgba(23,10,8,.12)),
     url("https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-23_01-14-38.jpg?v=1787437112");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
+}
+
+.frame{
+  border:1px solid rgba(232,226,223,.95);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 10px 32px rgba(20,20,18,.10);
 }
 
 iframe{
@@ -338,7 +341,23 @@ iframe{
   min-height:1120px;
   border:0;
   display:block;
-  background:transparent;
+
+  /* Keep the actual Zenoti form white and readable */
+  background:#fff;
+}
+
+
+/* Mobile: keep a smaller image border around the form */
+
+@media(max-width:800px){
+  .frame-pad{
+    padding:12px;
+    background-position:center top;
+  }
+
+  iframe{
+    min-height:1250px;
+  }
 }
 
 
@@ -549,15 +568,6 @@ footer{
   .secure{
     display:none;
   }
-
-  .frame-pad{
-    padding:4px;
-  }
-
-  iframe{
-    min-height:1250px;
-  }
-
 
   /* Info cards */
 
