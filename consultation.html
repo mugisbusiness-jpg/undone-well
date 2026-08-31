@@ -1,26 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Book a Consultation | Undone Well.</title>
-<meta name="description" content="Request your consultation with Undone Well Medical Aesthetics.">
+
+<meta
+  name="description"
+  content="Request your consultation with Undone Well Medical Aesthetics."
+>
+
 <meta name="theme-color" content="#f6f5f2">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
+
 
 <style>
 
 :root{
+
   --bg:#f6f5f2;
   --card:#ffffff;
   --ink:#171817;
 
-  /* Updated muted red / burgundy typography */
   --muted:#8e4a4a;
   --muted-soft:#a25f5f;
   --accent:#963f3f;
@@ -28,8 +39,11 @@
   --line:#e8e2df;
   --soft:#f8f2f0;
   --green:#7d9274;
+
   --shadow:0 18px 55px rgba(20,20,18,.07);
+
 }
+
 
 *{
   box-sizing:border-box;
@@ -37,585 +51,1070 @@
   padding:0;
 }
 
+
 body{
+
   font-family:"DM Sans",sans-serif;
+
   background:var(--bg);
+
   color:var(--ink);
+
   -webkit-font-smoothing:antialiased;
+
 }
+
 
 a{
+
   color:inherit;
+
   text-decoration:none;
+
 }
+
 
 .wrap{
+
   width:min(1180px,calc(100% - 40px));
+
   margin:auto;
+
 }
 
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
+
   height:76px;
+
   background:#fff;
+
   border-bottom:1px solid var(--line);
+
   display:flex;
+
   align-items:center;
+
 }
+
 
 .nav{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
 }
+
 
 .logo img{
+
   width:190px;
+
   max-height:42px;
+
   display:block;
+
   object-fit:contain;
+
   object-position:left;
+
 }
+
 
 .exit{
+
   display:flex;
+
   align-items:center;
+
   gap:10px;
+
   color:var(--muted);
+
   font-size:12px;
+
 }
+
 
 .exit i{
+
   font-style:normal;
+
   width:34px;
+
   height:34px;
+
   border:1px solid var(--line);
+
   border-radius:9px;
+
   display:grid;
+
   place-items:center;
+
   background:#fff;
+
 }
 
 
-/* PAGE HEADING */
+
+/* =========================
+   PAGE HEADING
+========================= */
 
 .page{
+
   padding:38px 0 75px;
+
 }
+
 
 .heading{
+
   display:flex;
+
   justify-content:space-between;
+
   align-items:flex-end;
+
   gap:40px;
+
   margin-bottom:25px;
+
 }
+
 
 .heading > div{
+
   flex:0 0 auto;
+
 }
+
 
 .heading small{
+
   display:block;
+
   font-size:10px;
+
   letter-spacing:.08em;
+
   color:var(--accent);
+
   font-weight:600;
+
   margin-bottom:8px;
+
 }
+
 
 .heading h1{
+
   font-size:30px;
+
   font-weight:500;
+
   letter-spacing:-.035em;
+
 }
+
 
 .heading p{
+
   font-size:12.5px;
+
   color:var(--muted);
+
   max-width:575px;
+
   line-height:1.7;
+
   text-align:right;
+
   font-weight:400;
+
 }
 
 
-/* BOOKING LAYOUT */
+
+/* =========================
+   BOOKING LAYOUT
+========================= */
 
 .booking-layout{
+
   display:grid;
+
   grid-template-columns:250px minmax(0,1fr);
+
   gap:20px;
+
   align-items:start;
+
 }
 
 
-/* SIDEBAR */
+
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:16px;
+
   padding:21px;
+
   position:sticky;
+
   top:20px;
+
 }
+
 
 .sidebar-title{
+
   font-size:11px;
+
   font-weight:600;
+
   margin-bottom:20px;
+
   text-transform:uppercase;
+
   letter-spacing:.08em;
+
   color:var(--accent);
+
 }
+
 
 .steps{
+
   display:grid;
+
   gap:5px;
+
 }
+
 
 .step{
+
   display:flex;
+
   gap:12px;
+
   padding:12px 10px;
+
   border-radius:11px;
+
   position:relative;
+
   align-items:flex-start;
+
 }
+
 
 .step.active{
+
   background:var(--soft);
+
 }
+
 
 .step-num{
+
   width:28px;
+
   height:28px;
+
   border:1px solid #decfcb;
+
   border-radius:50%;
+
   display:grid;
+
   place-items:center;
+
   font-size:10px;
+
   font-weight:600;
+
   background:#fff;
+
   color:var(--accent);
+
   flex:0 0 auto;
+
 }
+
 
 .step.active .step-num{
+
   background:var(--accent);
+
   color:#fff;
+
   border-color:var(--accent);
+
 }
+
 
 .step b{
+
   display:block;
+
   font-size:11.5px;
+
   font-weight:500;
+
   margin:2px 0 2px;
+
   color:var(--ink);
+
 }
+
 
 .step span{
+
   font-size:9.5px;
+
   color:var(--muted-soft);
+
   line-height:1.4;
+
 }
 
 
-/* HELP AREA */
+
+/* =========================
+   HELP AREA
+========================= */
 
 .help{
+
   border-top:1px solid var(--line);
+
   margin-top:18px;
+
   padding-top:18px;
+
 }
+
 
 .help b{
+
   display:block;
+
   font-size:11px;
+
   font-weight:500;
+
   margin-bottom:5px;
+
   color:var(--ink);
+
 }
+
 
 .help p{
+
   font-size:10px;
+
   color:var(--muted);
+
   line-height:1.55;
+
 }
+
 
 .help-phone{
+
   display:inline-flex;
+
   align-items:center;
+
   margin-top:9px;
+
   font-size:11px;
+
   font-weight:600;
+
   color:var(--accent);
+
   padding-bottom:2px;
+
   border-bottom:1px solid rgba(150,63,63,.28);
+
 }
+
 
 .help-phone:hover{
+
   border-color:var(--accent);
+
 }
 
 
-/* BOOKING CARD */
+
+/* =========================
+   BOOKING CARD
+========================= */
 
 .booking-card{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:16px;
+
   box-shadow:var(--shadow);
+
   overflow:hidden;
+
 }
+
 
 .card-head{
+
   padding:21px 26px;
+
   border-bottom:1px solid var(--line);
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:20px;
+
 }
+
 
 .card-head h2{
+
   font-size:17px;
+
   font-weight:500;
+
   letter-spacing:-.02em;
+
   margin-bottom:4px;
+
 }
+
 
 .card-head p{
+
   font-size:10.5px;
+
   color:var(--muted);
+
 }
+
 
 .secure{
+
   display:flex;
+
   align-items:center;
+
   gap:8px;
+
   font-size:9px;
+
   letter-spacing:.08em;
+
   text-transform:uppercase;
+
   color:var(--muted);
+
 }
+
 
 .secure i{
+
   width:7px;
+
   height:7px;
+
   border-radius:50%;
+
   background:var(--green);
+
   box-shadow:0 0 0 4px rgba(125,146,116,.12);
+
 }
 
 
-/* ZENOTI FRAME */
+
+/* =========================
+   ZENOTI FRAME
+========================= */
 
 .frame-pad{
+
   padding:22px;
+
   border-radius:0 0 16px 16px;
 
-  /* Image only around the form */
+  /*
+    Image around / behind the
+    transparent Zenoti form
+  */
+
   background-image:
-    linear-gradient(rgba(23,10,8,.12), rgba(23,10,8,.12)),
+    linear-gradient(
+      rgba(23,10,8,.12),
+      rgba(23,10,8,.12)
+    ),
     url("https://cdn.shopify.com/s/files/1/1006/2574/4189/files/photo_2026-08-23_01-14-38.jpg?v=1787437112");
+
   background-size:cover;
+
   background-position:center;
+
   background-repeat:no-repeat;
+
 }
+
+
+/*
+  IMPORTANT:
+  Wrapper is now transparent.
+*/
 
 .frame{
-  border:1px solid rgba(232,226,223,.95);
+
+  border:1px solid rgba(232,226,223,.65);
+
   border-radius:12px;
+
   overflow:hidden;
-  background:#fff;
+
+  background:transparent !important;
+
   box-shadow:0 10px 32px rgba(20,20,18,.10);
+
 }
 
-iframe{
-  width:100%;
+
+/*
+  IMPORTANT:
+  Zenoti iframe is also transparent.
+
+  Zenoti URL already contains:
+  &transparent=true
+*/
+
+.frame iframe,
+iframe[data-lms-form]{
+
+  width:100% !important;
+
   min-height:1120px;
-  border:0;
+
+  border:0 !important;
+
   display:block;
 
-  /* Keep the actual Zenoti form white and readable */
-  background:#fff;
+  background:transparent !important;
+
 }
 
 
-/* Mobile: keep a smaller image border around the form */
+
+/* =========================
+   MOBILE ZENOTI
+========================= */
 
 @media(max-width:800px){
+
   .frame-pad{
+
     padding:12px;
+
     background-position:center top;
+
   }
 
-  iframe{
+
+  .frame iframe,
+  iframe[data-lms-form]{
+
     min-height:1250px;
+
   }
+
 }
 
 
-/* BOTTOM INFORMATION */
+
+/* =========================
+   BOTTOM INFORMATION
+========================= */
 
 .bottom-info{
+
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:10px;
+
   margin-top:15px;
+
 }
+
 
 .info{
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:13px;
+
   padding:15px 16px;
+
   display:flex;
+
   gap:11px;
+
   align-items:flex-start;
+
 }
+
 
 .info .icon{
+
   width:29px;
+
   height:29px;
+
   border-radius:8px;
+
   background:var(--soft);
+
   display:grid;
+
   place-items:center;
+
   font-size:11px;
+
   color:var(--accent);
+
   flex:0 0 auto;
+
 }
+
 
 .info b{
+
   display:block;
+
   font-size:10.5px;
+
   font-weight:500;
+
   margin-bottom:2px;
+
   color:var(--ink);
+
 }
+
 
 .info p{
+
   font-size:9.5px;
+
   color:var(--muted);
+
   line-height:1.45;
+
 }
 
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
+
   padding:25px 0 35px;
+
   color:var(--muted);
+
   font-size:9.5px;
+
 }
+
 
 .foot{
+
   display:flex;
+
   justify-content:space-between;
+
   gap:20px;
+
   border-top:1px solid var(--line);
+
   padding-top:22px;
+
 }
 
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
+
   .wrap{
+
     width:min(100% - 26px,1180px);
+
   }
+
 
   header{
+
     height:68px;
+
   }
+
 
   .logo img{
+
     width:165px;
+
   }
+
 
   .exit span{
+
     display:none;
+
   }
 
 
-  /* Heading */
+
+  /* HEADING */
 
   .page{
+
     padding:27px 0 55px;
+
   }
+
 
   .heading{
+
     display:block;
+
     margin-bottom:18px;
+
   }
+
 
   .heading small{
+
     line-height:1.5;
+
     margin-bottom:7px;
+
   }
+
 
   .heading h1{
+
     font-size:26px;
+
   }
+
 
   .heading p{
+
     text-align:left;
+
     margin-top:11px;
+
     max-width:100%;
+
     font-size:12px;
+
     line-height:1.65;
+
   }
 
 
-  /* Layout */
+
+  /* LAYOUT */
 
   .booking-layout{
+
     grid-template-columns:1fr;
+
     gap:14px;
+
   }
 
 
-  /* Mobile booking timeline */
+
+  /* MOBILE BOOKING TIMELINE */
 
   .sidebar{
+
     position:static;
+
     padding:14px 12px;
+
     border-radius:14px;
+
   }
+
 
   .sidebar-title{
+
     display:block;
+
     margin:0 0 11px 3px;
+
     font-size:9px;
+
     letter-spacing:.1em;
+
   }
+
 
   .steps{
+
     grid-template-columns:repeat(3,minmax(0,1fr));
+
     gap:6px;
+
   }
+
 
   .step{
+
     min-width:0;
+
     padding:10px 4px;
+
     flex-direction:column;
+
     align-items:center;
+
     justify-content:flex-start;
+
     text-align:center;
+
     gap:6px;
+
   }
+
 
   .step-num{
+
     width:27px;
+
     height:27px;
+
     font-size:9px;
+
   }
+
 
   .step > div:last-child{
+
     min-width:0;
+
     width:100%;
+
   }
+
 
   .step b{
+
     font-size:9.5px;
+
     line-height:1.25;
+
     margin:0;
+
     white-space:normal;
+
     overflow-wrap:anywhere;
+
   }
+
 
   .step span{
+
     display:none;
+
   }
 
 
-  /* Help stays visible on mobile */
+
+  /* HELP */
 
   .help{
+
     display:block;
+
     margin-top:12px;
+
     padding:12px 4px 1px;
+
     text-align:center;
+
   }
+
 
   .help b{
+
     font-size:10.5px;
+
   }
+
 
   .help p{
+
     font-size:9.5px;
+
   }
+
 
   .help-phone{
+
     font-size:11px;
+
     margin-top:7px;
+
   }
 
 
-  /* Booking form */
+
+  /* BOOKING HEADER */
 
   .card-head{
+
     padding:18px 17px;
+
   }
+
 
   .secure{
+
     display:none;
+
   }
 
-  /* Info cards */
+
+
+  /* INFO CARDS */
 
   .bottom-info{
+
     grid-template-columns:1fr;
+
   }
 
+
   .foot{
+
     display:block;
+
     line-height:2;
+
   }
+
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
   <div class="wrap nav">
 
+
     <a class="logo" href="/">
+
       <img
         src="https://cdn.shopify.com/s/files/1/1006/2574/4189/files/IMG_0648_1.png?v=1786043343"
         alt="Undone Well."
       >
+
     </a>
 
+
     <a class="exit" href="/">
-      <span>Exit booking</span>
-      <i>×</i>
+
+      <span>
+        Exit booking
+      </span>
+
+      <i>
+        ×
+      </i>
+
     </a>
+
 
   </div>
 
 </header>
 
 
+
+<!-- =========================
+     MAIN
+========================= -->
+
 <main class="page">
 
 <div class="wrap">
 
 
+
+  <!-- =========================
+       PAGE HEADING
+  ========================= -->
+
   <div class="heading">
+
 
     <div>
 
@@ -623,212 +1122,347 @@ footer{
         Consultation booking - let’s start your treatment roadmap!
       </small>
 
-      <h1>Request an appointment</h1>
+      <h1>
+        Request an appointment
+      </h1>
 
     </div>
 
+
     <p>
-      <strong>Your experience starts here.</strong>
+
+      <strong>
+        Your experience starts here.
+      </strong>
+
       Tell us a little about what you’re interested in, and what you’d like to accomplish.
+
       Our team personally reviews every request and will reach out to thoughtfully
-      coordinate your next step. We can’t wait to meet you!
+      coordinate your next step.
+
+      We can’t wait to meet you!
+
     </p>
+
 
   </div>
 
 
+
+  <!-- =========================
+       BOOKING LAYOUT
+  ========================= -->
+
   <div class="booking-layout">
 
 
-    <!-- BOOKING PROGRESS -->
+
+    <!-- =========================
+         BOOKING PROGRESS
+    ========================= -->
 
     <aside class="sidebar">
 
+
       <div class="sidebar-title">
+
         Your booking
+
       </div>
+
+
 
       <div class="steps">
 
+
+
         <div class="step active">
+
 
           <div class="step-num">
             1
           </div>
 
+
           <div>
-            <b>Your information</b>
-            <span>Contact details &amp; preferences</span>
+
+            <b>
+              Your information
+            </b>
+
+            <span>
+              Contact details &amp; preferences
+            </span>
+
           </div>
+
 
         </div>
 
 
+
         <div class="step">
+
 
           <div class="step-num">
             2
           </div>
 
+
           <div>
-            <b>Team review</b>
-            <span>We review your request</span>
+
+            <b>
+              Team review
+            </b>
+
+            <span>
+              We review your request
+            </span>
+
           </div>
+
 
         </div>
 
 
+
         <div class="step">
+
 
           <div class="step-num">
             3
           </div>
 
+
           <div>
-            <b>Confirmation</b>
-            <span>We'll contact you directly</span>
+
+            <b>
+              Confirmation
+            </b>
+
+            <span>
+              We'll contact you directly
+            </span>
+
           </div>
 
+
         </div>
+
 
       </div>
 
 
+
+      <!-- HELP -->
+
       <div class="help">
 
-        <b>Need assistance?</b>
+
+        <b>
+          Need assistance?
+        </b>
+
 
         <p>
+
           Our team is available to help with your consultation request.
+
         </p>
+
 
         <a
           class="help-phone"
           href="tel:+16193306393"
         >
+
           619-330-6393
+
         </a>
 
+
       </div>
+
 
     </aside>
 
 
-    <!-- MAIN BOOKING CONTENT -->
+
+    <!-- =========================
+         MAIN BOOKING CONTENT
+    ========================= -->
 
     <section>
+
 
 
       <div class="booking-card">
 
 
+
+        <!-- CARD HEADER -->
+
         <div class="card-head">
 
+
           <div>
+
 
             <h2>
               Consultation details
             </h2>
 
+
             <p>
               Please provide the information requested below.
             </p>
 
+
           </div>
+
 
 
           <div class="secure">
+
             <i></i>
+
             Secure
+
           </div>
+
 
         </div>
 
 
+
+        <!-- =========================
+             ZENOTI BACKGROUND AREA
+        ========================= -->
+
         <div class="frame-pad">
 
+
+
           <div class="frame">
+
+
+
+            <!-- =========================
+                 UPDATED ZENOTI IFRAME
+            ========================= -->
 
             <iframe
               data-lms-form
               referrerpolicy="unsafe-url"
               src="https://lmsforms.zenoti.com?token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb3JtX2lkIjoiM2EwNzM3NWEtNTJjYS00ZTYzLTkzNjMtODhjOTRmYjdjZmU5IiwiYXBpX3VybCI6Imh0dHBzOi8vYXBpYW1yczA1Lnplbm90aS5jb20iLCJqdGkiOiJjNjkzYzA5MS1mODI0LTQxZGItYTc2MC1lNzJhYjYwOWMwM2QiLCJpYXQiOjE3ODYwMzYwODgsIm5iZiI6MTc4NjAzNjA4OCwiZXhwIjoxNzg2MDM5Njg4fQ.Bl5lYA2xWS6V7_XHWX4Bm2jA4Ycsq9gLFR4wVE46wC-q99-K1CBTrn3b3-ee9OYyJQGnR2rPr9P72a9L1hZqsw&transparent=true"
+              width="100%"
               frameborder="0"
-              title="Undone Well Consultation Form"
-              loading="eager">
+              style="border:none;background:transparent;"
+              title="Contact Form"
+              loading="lazy"
+            >
             </iframe>
+
+
 
           </div>
 
+
+
         </div>
+
 
       </div>
 
 
-      <!-- BOTTOM INFO -->
+
+      <!-- =========================
+           BOTTOM INFO
+      ========================= -->
 
       <div class="bottom-info">
 
 
+
         <div class="info">
+
 
           <div class="icon">
             01
           </div>
 
+
           <div>
+
 
             <b>
               Private &amp; secure
             </b>
 
+
             <p>
               Your request is submitted securely through Zenoti.
             </p>
 
+
           </div>
+
 
         </div>
 
 
+
         <div class="info">
+
 
           <div class="icon">
             02
           </div>
 
+
           <div>
+
 
             <b>
               Personally reviewed
             </b>
 
+
             <p>
               The Undone Well team reviews your consultation details.
             </p>
 
+
           </div>
+
 
         </div>
 
 
+
         <div class="info">
+
 
           <div class="icon">
             03
           </div>
 
+
           <div>
+
 
             <b>
               Direct follow-up
             </b>
 
+
             <p>
               Our team contacts you regarding your next step.
             </p>
 
+
           </div>
+
 
         </div>
 
@@ -841,33 +1475,50 @@ footer{
 
   </div>
 
+
 </div>
 
 </main>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
+
   <div class="wrap foot">
+
 
     <span>
       © Undone Well
     </span>
 
+
     <span>
       Bankers Hill · San Diego, California
     </span>
 
+
   </div>
+
 
 </footer>
 
 
+
+<!-- =========================
+     ZENOTI ATTRIBUTION
+========================= -->
+
 <script
   src="https://lmsforms.zenoti.com/lms-attribution.js"
-  async>
-</script>
+  async
+></script>
 
 
 </body>
+
 </html>
